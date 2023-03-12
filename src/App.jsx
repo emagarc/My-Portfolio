@@ -4,6 +4,7 @@ import Who from "./components/Who";
 import Works from "./components/Works";
 import styled from "styled-components";
 import bg from "./public/images/bg.jpeg";
+import Test from "./components/Test";
 
 const Container = styled.div`
   height: 100vh;
@@ -25,6 +26,7 @@ function App() {
       <Who />
       <Works />
       <Contact />
+      <Test />
     </Container>
   );
 }
