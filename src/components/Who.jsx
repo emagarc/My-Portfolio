@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import line from "../public/images/line.png";
-import Moon from "../public/images/moon.png";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
