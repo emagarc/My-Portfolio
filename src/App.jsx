@@ -10,7 +10,7 @@ import Stars from "./components/Stars";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   height: 100vh;
@@ -26,6 +26,7 @@ const Container = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  padding: 0;
 `;
 
 const DivStar = styled.div`
@@ -43,7 +44,7 @@ const DivFather = styled.div`
   position: relative;
 `;
 
-// Definimos el contexto para compartir los datos de las estrellas
+//Definimos el contexto para compartir los datos de las estrellas
 export const StarsContext = createContext([]);
 
 // Definimos el componente StarsProvider que provee los datos de las estrellas

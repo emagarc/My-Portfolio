@@ -2,12 +2,13 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import Navbar from "./NavBar";
 import line from "../public/images/line.png";
-import personReact from "../public/images/personReact.png";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import meToon2 from "../public/images/meToon2.png";
 
 const Section = styled.div`
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -16,11 +17,12 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  min-height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  max-width: 100vw;
 `;
 
 const Left = styled.div`
@@ -69,11 +71,13 @@ const Right = styled.div`
   flex: 3;
   position: relative;
   z-index: 9999;
+  height: 100%;
 `;
 
 const Img = styled.img`
-  width: 650px;
-  height: 450px;
+  transform: rotate(5deg);
+  width: 550px;
+  height: 350px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -81,15 +85,20 @@ const Img = styled.img`
   left: 0;
   right: 0;
   margin: auto;
-  animation: animate 2s infinite ease alternate;
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
+  filter: drop-shadow(0 0 30px #da4ea2);
+  animation: float 3s ease-in-out infinite;
+  @keyframes float {
+    0% {
+      transform: rotate(5deg) translateY(0);
+    }
+    50% {
+      transform: rotate(5deg) translateY(-10px);
+    }
+    100% {
+      transform: rotate(5deg) translateY(0);
     }
   }
 `;
-
 const Hero = () => {
   return (
     <Section>
@@ -120,7 +129,7 @@ const Hero = () => {
               />
             </Sphere>
           </Canvas>
-          <Img src={personReact} />
+          <Img src={meToon2} />
         </Right>
       </Container>
     </Section>
