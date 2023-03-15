@@ -22,6 +22,7 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
+  z-index: 9999;
 `;
 
 const Title = styled.h1`

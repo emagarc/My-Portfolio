@@ -68,6 +68,7 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 3;
   position: relative;
+  z-index: 9999;
 `;
 
 const Img = styled.img`

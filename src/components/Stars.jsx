@@ -25,9 +25,9 @@ const Stars = () => {
   const springs = useSprings(
     stars.length,
     stars.map(({ x, y }) => ({
-      from: { x, y, opacity: 0 },
+      from: { x, y, opacity: 1 },
       to: async (next) => {
-        await next({ opacity: 0.8 });
+        await next({ opacity: 0.6 });
         while (true) {
           await next({
             x: x + Math.random() * 20 - 10,

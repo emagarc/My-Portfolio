@@ -7,16 +7,18 @@ import { StarsContext } from "../App";
 const data = ["Technologies", "Social Media"];
 
 const Section = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  height: auto;
 `;
 
 const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  min-height: 100vh;
 `;
 
 const Left = styled.div`

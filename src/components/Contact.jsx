@@ -63,6 +63,7 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  z-index: 9999;
 `;
 
 const Contact = () => {

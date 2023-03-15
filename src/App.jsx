@@ -68,20 +68,6 @@ function StarsProvider({ children }) {
 }
 
 function App() {
-  const [stars, setStars] = useState([]);
-
-  useEffect(() => {
-    const newStars = [];
-    for (let i = 0; i < 500; i++) {
-      newStars.push({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 3 + 1,
-      });
-    }
-    setStars(newStars);
-  }, []);
-
   return (
     <DivFather>
       <DivStar />
@@ -91,8 +77,8 @@ function App() {
           <Who />
           <Works />
           <Contact />
-          <Stars />
         </Container>
+        <Stars />
       </StarsProvider>
     </DivFather>
   );
