@@ -1,16 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Development from "./Development";
-import WebDesign from "./WebDesign";
-import ProductDesign from "./ProductDesign";
+import SocialMedia from "./SocialMedia";
+import Technologies from "./Technologies";
 
-const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Product Design",
-  "Social Media",
-];
+const data = ["Technologies", "Social Media"];
 
 const Section = styled.div`
   height: 100vh;
@@ -35,7 +28,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 `;
 
 const ListItem = styled.li`
@@ -89,12 +82,12 @@ const Works = () => {
           </List>
         </Left>
         <Right>
-          {Work === "Web Design" ? (
-            <WebDesign />
-          ) : Work === "Development" ? (
-            <Development />
+          {Work === "Technologies" ? (
+            <Technologies />
+          ) : Work === "Social Media" ? (
+            <SocialMedia />
           ) : (
-            <ProductDesign />
+            <Technologies />
           )}
         </Right>
       </Container>

@@ -71,8 +71,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 700px;
-  height: 500px;
+  width: 650px;
+  height: 450px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -110,12 +110,12 @@ const Hero = () => {
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2.2}>
+            <Sphere args={[1, 100, 200]} scale={2.1}>
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}
                 distort={0.5}
-                speed={2}
+                speed={1.6}
               />
             </Sphere>
           </Canvas>
