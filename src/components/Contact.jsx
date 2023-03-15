@@ -2,10 +2,13 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import Map from "./Map";
+import { useContext } from "react";
+import { StarsContext } from "../App";
 
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  min-height: 100vh; /* Agregamos esta línea */
 `;
 
 const Container = styled.div`

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Navbar from "./NavBar";
 import line from "../public/images/line.png";

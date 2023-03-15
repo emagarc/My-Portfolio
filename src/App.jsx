@@ -1,15 +1,25 @@
+import React, { useState, useEffect, createContext } from "react";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
 import Works from "./components/Works";
 import styled from "styled-components";
 import bg from "./public/images/bg.jpeg";
+import Stars from "./components/Stars";
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
+  min-height: 100%;
+  width: 100vw;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
   color: white;
   background: url(${bg});
@@ -18,14 +28,73 @@ const Container = styled.div`
   }
 `;
 
-function App() {
+const DivStar = styled.div`
+  background-image: url(${bg});
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+`;
+
+const DivFather = styled.div`
+  position: relative;
+`;
+
+// Definimos el contexto para compartir los datos de las estrellas
+export const StarsContext = createContext([]);
+
+// Definimos el componente StarsProvider que provee los datos de las estrellas
+function StarsProvider({ children }) {
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    const newStars = [];
+    for (let i = 0; i < 500; i++) {
+      newStars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 3 + 1,
+      });
+    }
+    setStars(newStars);
+  }, []);
+
   return (
-    <Container>
-      <Hero />
-      <Who />
-      <Works />
-      <Contact />
-    </Container>
+    <StarsContext.Provider value={stars}>{children}</StarsContext.Provider>
+  );
+}
+
+function App() {
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    const newStars = [];
+    for (let i = 0; i < 500; i++) {
+      newStars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 3 + 1,
+      });
+    }
+    setStars(newStars);
+  }, []);
+
+  return (
+    <DivFather>
+      <DivStar />
+      <StarsProvider>
+        <Container>
+          <Hero />
+          <Who />
+          <Works />
+          <Contact />
+          <Stars />
+        </Container>
+      </StarsProvider>
+    </DivFather>
   );
 }
 

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useContext } from "react";
+import styled, { css } from "styled-components";
 import SocialMedia from "./SocialMedia";
 import Technologies from "./Technologies";
+import { StarsContext } from "../App";
 
 const data = ["Technologies", "Social Media"];
 
@@ -65,10 +66,20 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+
+  ${(props) =>
+    props.showStars &&
+    css`
+      background: url("https://i.ibb.co/BzF0V8K/stars.png") no-repeat center
+        center fixed;
+      background-size: cover;
+    `}
 `;
 
 const Works = () => {
   const [Work, setWork] = useState("Web Design");
+  const { showStars } = useContext(StarsContext);
+
   return (
     <Section>
       <Container>
@@ -81,7 +92,7 @@ const Works = () => {
             ))}
           </List>
         </Left>
-        <Right>
+        <Right showStars={showStars}>
           {Work === "Technologies" ? (
             <Technologies />
           ) : Work === "Social Media" ? (
