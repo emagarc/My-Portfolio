@@ -6,7 +6,7 @@ import Gmail from "../public/images/gmail.png";
 import Github from "../public/images/github.png";
 
 const Table = styled.table`
-  border-spacing: 250px 100px;
+  border-spacing: 230px 100px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -19,7 +19,8 @@ const Container = styled.div`
   height: 100vh; /* Establecer la altura del contenedor en una unidad de medida relativa */
   display: flex; /* Usar display: flex para poder centrar verticalmente la tabla */
   align-items: center; /* Centrar verticalmente la tabla */
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-top: 40px;
 `;
 
 const Td = styled.td`
@@ -27,16 +28,64 @@ const Td = styled.td`
   text-align: center;
 `;
 
-const DivImage = styled.div``;
+const DivImage = styled.div`
+  img {
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.2);
+      animation: zoom 0.5s ease forwards;
+      animation-delay: 1s;
+    }
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(-10px);
+    }
+    20% {
+      transform: translateX(10px);
+    }
+    30% {
+      transform: translateX(-10px);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    60% {
+      transform: translateX(10px);
+    }
+    70% {
+      transform: translateX(-10px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    90% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+`;
 
 const DivText = styled.div`
   padding-top: 10px;
-  text-align: center;
-  opacity: 0.6;
-`;
-
-const DivTextGit = styled.div`
-  padding-top: -2px;
   text-align: center;
   opacity: 0.6;
 `;
@@ -78,11 +127,11 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://github.com/emagarc">
-                <img src={Github} width="120" height="120" alt="GitHub" />
+                <img src={Github} width="85" height="85" alt="GitHub" />
               </a>
             </DivImage>
             <br />
-            <DivTextGit>Github</DivTextGit>
+            <DivText>Github</DivText>
           </Td>
         </tr>
       </Table>

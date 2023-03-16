@@ -18,7 +18,23 @@ const Td = styled.td`
   text-align: center;
 `;
 
-const DivImage = styled.div``;
+const DivImage = styled.div`
+  img {
+    animation: zoom 6s ease-in-out infinite;
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+`;
 
 const DivText = styled.div`
   padding-top: 10px;

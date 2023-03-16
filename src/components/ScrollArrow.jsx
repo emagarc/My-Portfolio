@@ -22,7 +22,7 @@ const ScrollArrowContainer = styled(animated.div)`
       margin-bottom: 2px;
       transition: all 1s ease;
       border-color: #da4ea2;
-      opacity: 0.5;
+      opacity: 0.3;
     }
 
     span:last-child {

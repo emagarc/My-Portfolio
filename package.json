@@ -18,6 +18,7 @@
     "react-router-dom": "^6.9.0",
     "react-simple-maps": "^3.0.0",
     "react-spring": "^9.7.1",
+    "react-transition-group": "^4.4.5",
     "styled-components": "^5.3.8",
     "three": "^0.150.1",
     "troika-three-text": "^0.47.1"

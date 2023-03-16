@@ -126,7 +126,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Full Stack Web Developer</Title>
           <WhatWeDo>
             <Line src={line} />
             <SubTitle>What I Do</SubTitle>
