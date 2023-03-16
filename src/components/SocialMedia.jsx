@@ -6,7 +6,7 @@ import Gmail from "../public/images/gmail.png";
 import Github from "../public/images/github.png";
 
 const Table = styled.table`
-  border-spacing: 100px 70px;
+  border-spacing: 250px 100px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -19,6 +19,7 @@ const Container = styled.div`
   height: 100vh; /* Establecer la altura del contenedor en una unidad de medida relativa */
   display: flex; /* Usar display: flex para poder centrar verticalmente la tabla */
   align-items: center; /* Centrar verticalmente la tabla */
+  margin-left: 20px;
 `;
 
 const Td = styled.td`
@@ -35,7 +36,7 @@ const DivText = styled.div`
 `;
 
 const DivTextGit = styled.div`
-  padding-top: 0px;
+  padding-top: -2px;
   text-align: center;
   opacity: 0.6;
 `;
@@ -77,7 +78,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://github.com/emagarc">
-                <img src={Github} width="100" height="100" alt="GitHub" />
+                <img src={Github} width="120" height="120" alt="GitHub" />
               </a>
             </DivImage>
             <br />
