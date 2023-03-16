@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "./NavBar";
 import line from "../public/images/line.png";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import meToon2 from "../public/images/meToon2.png";
+import ScrollArrow from "./ScrollArrow";
 
 const Section = styled.div`
   height: 100%;
@@ -23,6 +24,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 100vw;
+  margin-top: -50px;
 `;
 
 const Left = styled.div`
@@ -100,8 +102,27 @@ const Img = styled.img`
   }
 `;
 const Hero = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const containerRef = useRef();
+
+  const handleScroll = () => {
+    if (
+      containerRef.current.scrollTop > 0 &&
+      containerRef.current.scrollHeight - containerRef.current.scrollTop !==
+        containerRef.current.clientHeight
+    ) {
+      setHasScrolled(true);
+    } else {
+      setHasScrolled(false);
+    }
+  };
+
   return (
-    <Section>
+    <Section
+      onScroll={handleScroll}
+      ref={containerRef}
+      hasScrolled={hasScrolled}
+    >
       <Navbar />
       <Container>
         <Left>
@@ -116,22 +137,27 @@ const Hero = () => {
           <Button>Learn More</Button>
         </Left>
         <Right>
-          <Canvas>
+          <Canvas shadowMap>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2.1}>
+            <directionalLight position={[3, 2, 1]} castShadow />
+            <Sphere args={[1, 100, 200]} scale={2} castShadow>
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}
-                distort={0.5}
-                speed={1.6}
+                distort={0.4}
+                speed={1.4}
               />
             </Sphere>
+            <mesh receiveShadow>
+              <planeBufferGeometry args={[10, 10]} />
+              <shadowMaterial opacity={0.3} />
+            </mesh>
           </Canvas>
           <Img src={meToon2} />
         </Right>
       </Container>
+      <ScrollArrow />
     </Section>
   );
 };
