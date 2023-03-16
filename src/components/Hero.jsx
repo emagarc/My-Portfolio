@@ -1,11 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "./NavBar";
-import line from "../public/images/line.png";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import meToon2 from "../public/images/meToon2.png";
 import ScrollArrow from "./ScrollArrow";
+import Intro from "./Intro";
+import AboutMe from "./AboutMe";
 
 const Section = styled.div`
   height: 100%;
@@ -33,40 +34,6 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-`;
-
-const Title = styled.h1`
-  font-size: 74px;
-`;
-
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
-`;
-
-const SubTitle = styled.h2`
-  color: #da4ea2;
-`;
-
-const Desc = styled.p`
-  font-size: 24px;
-  color: whitesmoke;
-`;
-
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 `;
 
 const Right = styled.div`
@@ -102,39 +69,25 @@ const Img = styled.img`
   }
 `;
 const Hero = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
   const containerRef = useRef();
+  const [currentContent, setCurrentContent] = useState("Intro");
 
-  const handleScroll = () => {
-    if (
-      containerRef.current.scrollTop > 0 &&
-      containerRef.current.scrollHeight - containerRef.current.scrollTop !==
-        containerRef.current.clientHeight
-    ) {
-      setHasScrolled(true);
-    } else {
-      setHasScrolled(false);
-    }
+  const handleBackClick = () => {
+    setCurrentContent("Intro");
   };
 
   return (
-    <Section
-      onScroll={handleScroll}
-      ref={containerRef}
-      hasScrolled={hasScrolled}
-    >
+    <Section ref={containerRef}>
       <Navbar />
       <Container>
         <Left>
-          <Title>Full Stack Web Developer</Title>
-          <WhatWeDo>
-            <Line src={line} />
-            <SubTitle>What I Do</SubTitle>
-          </WhatWeDo>
-          <Desc>
-            I enjoy creating deligthful, human-centered digital experiences.
-          </Desc>
-          <Button>Learn More</Button>
+          {currentContent === "Intro" ? (
+            <Intro onClick={() => setCurrentContent("AboutMe")} />
+          ) : currentContent === "AboutMe" ? (
+            <AboutMe onBackClick={handleBackClick} />
+          ) : (
+            <Intro />
+          )}
         </Left>
         <Right>
           <Canvas shadowMap>

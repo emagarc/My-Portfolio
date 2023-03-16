@@ -1,108 +1,92 @@
-import React, { useState, useContext } from "react";
-import styled, { css } from "styled-components";
-import SocialMedia from "./SocialMedia";
-import Technologies from "./Technologies";
-import { StarsContext } from "../App";
-
-const data = ["Technologies", "Social Media"];
+import React from "react";
+import styled from "styled-components";
+import line from "../public/images/line.png";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Cube from "./Cube";
 
 const Section = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
-  height: auto;
 `;
 
 const Container = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
-  min-height: 100vh;
 `;
 
 const Left = styled.div`
   flex: 1;
-  display: flex;
-  align-items: center;
+  z-index: 9999;
 `;
 
-const List = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-`;
-
-const ListItem = styled.li`
-  font-size: 90px;
-  font-weight: bold;
-  cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-  position: relative;
-
-  ::after {
-    content: "${(props) => props.text}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: pink;
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  &:hover {
-    ::after {
-      animation: moveText 0.5s linear both;
-
-      @keyframes moveText {
-        to {
-          width: 100%;
-        }
-      }
-    }
-  }
+const Title = styled.h1`
+  font-size: 74px;
 `;
 
 const Right = styled.div`
   flex: 1;
-  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+`;
 
-  ${(props) =>
-    props.showStars &&
-    css`
-      background: url("https://i.ibb.co/BzF0V8K/stars.png") no-repeat center
-        center fixed;
-      background-size: cover;
-    `}
+const WhatWeDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const Line = styled.img`
+  height: 5px;
+`;
+
+const SubTitle = styled.h2`
+  color: #da4ea2;
+`;
+
+const Desc = styled.p`
+  font-size: 24px;
+  color: whitesmoke;
+`;
+
+const Button = styled.button`
+  background-color: #da4ea2;
+  color: white;
+  font-weight: 500;
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `;
 
 const Works = () => {
-  const [Work, setWork] = useState("Web Design");
-  const { showStars } = useContext(StarsContext);
-
   return (
     <Section>
       <Container>
         <Left>
-          <List>
-            {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
-                {item}
-              </ListItem>
-            ))}
-          </List>
+          <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Cube />
+          </Canvas>
         </Left>
-        <Right showStars={showStars}>
-          {Work === "Technologies" ? (
-            <Technologies />
-          ) : Work === "Social Media" ? (
-            <SocialMedia />
-          ) : (
-            <Technologies />
-          )}
+        <Right>
+          <Title>Think outside the square space</Title>
+          <WhatWeDo>
+            <Line src={line} />
+            <SubTitle>Who I am</SubTitle>
+          </WhatWeDo>
+          <Desc>a creative developer with a passion for the arts.</Desc>
+          <Button>See my works</Button>
         </Right>
       </Container>
     </Section>
