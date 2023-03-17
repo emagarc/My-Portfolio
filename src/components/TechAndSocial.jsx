@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import SocialMedia from "./SocialMedia";
 import Technologies from "./Technologies";
 import { StarsContext } from "../App";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const data = ["Technologies", "Social Media"];
 
@@ -12,6 +13,29 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out,
+      transform 500ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+  .fade-exit {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 300ms ease-in-out,
+      transform 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
 `;
 
 const Container = styled.div`
@@ -80,7 +104,7 @@ const Right = styled.div`
 `;
 
 const TechAndSocial = () => {
-  const [Item, setItem] = useState("Technologies");
+  const [Thing, setThing] = useState("Technologies");
   const { showStars } = useContext(StarsContext);
 
   return (
@@ -89,20 +113,24 @@ const TechAndSocial = () => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setItem(item)}>
+              <ListItem key={item} text={item} onClick={() => setThing(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
         <Right showStars={showStars}>
-          {Item === "Technologies" ? (
-            <Technologies />
-          ) : Item === "Social Media" ? (
-            <SocialMedia />
-          ) : (
-            <Technologies />
-          )}
+          <TransitionGroup>
+            <CSSTransition key={Thing} classNames="fade" timeout={300}>
+              {Thing === "Technologies" ? (
+                <Technologies />
+              ) : Thing === "Social Media" ? (
+                <SocialMedia />
+              ) : (
+                <Technologies />
+              )}
+            </CSSTransition>
+          </TransitionGroup>
         </Right>
       </Container>
     </Section>

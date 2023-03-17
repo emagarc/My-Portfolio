@@ -1,7 +1,7 @@
 import React from "react";
 import expressLogo from "../public/images/express.png";
 import sassLogo from "../public/images/sass.png";
-import githubLogo from "../public/images/github.png";
+import githubLogoT from "../public/images/github.png";
 import styled from "styled-components";
 
 const Table = styled.table`
@@ -20,10 +20,10 @@ const Td = styled.td`
 
 const DivImage = styled.div`
   img {
-    animation: zoom 10s ease-in-out infinite;
+    animation: zoom2 10s ease-in-out infinite;
   }
 
-  @keyframes zoom {
+  @keyframes zoom2 {
     0% {
       transform: scale(1);
     }
@@ -165,7 +165,7 @@ const Technologies = () => {
           </Td>
           <Td align="center" width="100">
             <DivImage>
-              <img src={githubLogo} width="85" height="85" alt="CSS3" />
+              <img src={githubLogoT} width="85" height="85" alt="CSS3" />
             </DivImage>
             <br />
             <DivText>Github</DivText>
