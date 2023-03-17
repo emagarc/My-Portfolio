@@ -20,7 +20,7 @@ const Td = styled.td`
 
 const DivImage = styled.div`
   img {
-    animation: zoom 6s ease-in-out infinite;
+    animation: zoom 10s ease-in-out infinite;
   }
 
   @keyframes zoom {
@@ -28,7 +28,7 @@ const DivImage = styled.div`
       transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+      transform: scale(1.3);
     }
     100% {
       transform: scale(1);

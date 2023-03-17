@@ -12,6 +12,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+  color: #f2f2f2;
 `;
 
 const WhatIDo = styled.div`
@@ -31,19 +32,27 @@ const SubTitle = styled.h2`
 
 const Desc = styled.p`
   font-size: 24px;
-  color: whitesmoke;
+  color: #f2f2f2;
+  /* text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5); */
+  opacity: 0.8;
 `;
 
 const Button = styled.button`
+  box-shadow: inset 0px 0px 0px 2.5px rgba(0, 0, 0, 0.4);
   background-color: #da4ea2;
-  color: white;
+  color: #f2f2f2;
   font-weight: 500;
+  height: 35px;
   width: 100px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   z-index: 9999;
+
+  &:active {
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 const Intro = ({ onClick }) => {

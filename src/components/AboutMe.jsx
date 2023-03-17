@@ -8,10 +8,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 25px;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 const WhatIDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 145px;
+`;
+
+const Welcome = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -27,30 +33,51 @@ const SubTitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 24px;
-  color: whitesmoke;
-  text-align: left;
+  font-weight: 375;
+  font-size: 23px;
+  color: #fdfdfd;
+  text-align: justify;
 `;
 
 const Button = styled.button`
+  margin-top: 2px;
+  box-shadow: inset 0px 0px 0px 2.5px rgba(0, 0, 0, 0.4);
+  position: relative;
   background-color: #da4ea2;
-  color: white;
+  color: #f2f2f2;
   font-weight: 500;
-  font-size: 15px;
-  width: 100px;
+  font-size: 10px;
+  width: 35px;
+  height: 25px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   z-index: 9999;
+
+  &::before {
+    content: "X";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+  }
+
+  &:active {
+    top: 2px;
+  }
 `;
 
 const AboutMe = ({ onBackClick }) => {
   return (
     <Container>
       <WhatIDo>
-        <Line src={line} />
-        <SubTitle>Welcome to my web portfolio !</SubTitle>
+        <Welcome>
+          <Line src={line} />
+          <SubTitle>Welcome to my web portfolio !</SubTitle>
+        </Welcome>
+        <Button onClick={onBackClick}>{""}</Button>
       </WhatIDo>
       <Desc>
         My name is Emanuel Garcia, and I am a fullstack web developer and
@@ -66,7 +93,6 @@ const AboutMe = ({ onBackClick }) => {
         you for visiting my site, and please do not hesitate to contact me if
         you have any questions or interest in working with me.
       </Desc>
-      <Button onClick={onBackClick}>{"<<"}</Button>
     </Container>
   );
 };
