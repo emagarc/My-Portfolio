@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navbar from "./NavBar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import meToon2 from "../public/images/meToon2.png";
+import meToon2 from "../public/images/Me/meToon2.png";
 import Intro from "./Intro";
 import AboutMe from "./AboutMe";
 import { TransitionGroup, CSSTransition } from "react-transition-group";

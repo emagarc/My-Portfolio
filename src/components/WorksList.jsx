@@ -4,7 +4,7 @@ import FoodsWebsite from "./FoodsWebsite";
 import HenryCinema from "./HenryCinema";
 import { StarsContext } from "../App";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import line from "../public/images/line.png";
+import line from "../public/images/Wallpapers/line.png";
 
 const data = ["Henry Cinema", "Foods Website"];
 

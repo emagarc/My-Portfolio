@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Carousel from "./Carousel";
 
 const Table = styled.table`
   border-spacing: 170px 70px;
@@ -39,8 +40,20 @@ const DivText = styled.div`
   opacity: 0.6;
 `;
 
+const images1 = [
+  "https://example.com/image1.jpg",
+  "https://example.com/image2.jpg",
+  "https://example.com/image3.jpg",
+  "https://example.com/image4.jpg",
+];
+
 const HenryCinema = () => {
-  return <div>Henry Cinema</div>;
+  return (
+    <div>
+      <h1>Carousel 1</h1>
+      <Carousel images={images1} />
+    </div>
+  );
 };
 
 export default HenryCinema;

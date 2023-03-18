@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
-import line from "../public/images/line.png";
+import line from "../public/images/Wallpapers/line.png";
 
 const Container = styled.div`
   flex: 2;

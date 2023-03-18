@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Works from "./components/Works";
 import TechAndSocial from "./components/TechAndSocial";
 import styled from "styled-components";
-import bg from "./public/images/bg.jpeg";
+import bg from "./public/images/Wallpapers/bg.jpeg";
 import Stars from "./components/Stars";
 
 const Container = styled.div`

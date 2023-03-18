@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Linkedin from "../public/images/linkedin.png";
-import Instagram from "../public/images/instagram.png";
-import Gmail from "../public/images/gmail.png";
-import Github from "../public/images/github.png";
+import Linkedin from "../public/images/Social Media/linkedin.png";
+import Instagram from "../public/images/Social Media/instagram.png";
+import Gmail from "../public/images/Social Media/gmail.png";
+import Github from "../public/images/Technologies/github.png";
 
 const Table = styled.table`
   border-spacing: 230px 100px;

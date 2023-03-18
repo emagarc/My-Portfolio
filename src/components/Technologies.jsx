@@ -1,7 +1,7 @@
 import React from "react";
-import expressLogo from "../public/images/express.png";
-import sassLogo from "../public/images/sass.png";
-import githubLogoT from "../public/images/github.png";
+import expressLogo from "../public/images/Technologies/express.png";
+import sassLogo from "../public/images/Technologies/sass.png";
+import githubLogoT from "../public/images/Technologies/github.png";
 import styled from "styled-components";
 
 const Table = styled.table`

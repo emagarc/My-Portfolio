@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import search from "../public/images/search.png";
+import search from "../public/images/Nav/search.png";
 
 const Section = styled.div`
   display: flex;
