@@ -14,7 +14,7 @@ const Container = styled.div`
 const WhatIDo = styled.div`
   display: flex;
   align-items: center;
-  gap: 145px;
+  gap: 30px;
 `;
 
 const Welcome = styled.div`
@@ -56,7 +56,7 @@ const Button = styled.button`
   z-index: 9999;
 
   &::before {
-    content: "X";
+    content: "<<";
     position: absolute;
     top: 50%;
     left: 50%;

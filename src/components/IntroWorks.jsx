@@ -11,6 +11,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  margin-left: 100px;
 `;
 
 const Left = styled.div`
@@ -28,6 +29,7 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  margin-left: 50px;
 `;
 
 const WhatWeDo = styled.div`
@@ -87,7 +89,9 @@ const IntroWorks = ({ setIntro }) => {
         </Canvas>
       </Left>
       <Right>
-        <Title>Think outside the square space</Title>
+        <Title>
+          Think outside <br /> the square space
+        </Title>
         <WhatWeDo>
           <Line src={line} />
           <SubTitle>Who I am</SubTitle>

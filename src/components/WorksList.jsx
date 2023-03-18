@@ -4,6 +4,7 @@ import FoodsWebsite from "./FoodsWebsite";
 import HenryCinema from "./HenryCinema";
 import { StarsContext } from "../App";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import line from "../public/images/line.png";
 
 const data = ["Henry Cinema", "Foods Website"];
 
@@ -45,13 +46,36 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
+const Top = styled.div`
+  margin-left: 90px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-self: flex-start;
+`;
+
+const LineAndSub = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+`;
+
+const Line = styled.img`
+  height: 5px;
+`;
+
+const SubTitle = styled.h2`
+  color: #da4ea2;
+`;
+
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 50px;
 `;
 
 const List = styled.ul`
@@ -59,6 +83,7 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  text-align: justify;
 `;
 
 const ListItem = styled.li`
@@ -123,7 +148,7 @@ const Button = styled.button`
   z-index: 9999;
 
   &::before {
-    content: "X";
+    content: "<<";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -144,7 +169,13 @@ const WorksList = ({ onBackClick }) => {
     <Section>
       <Container>
         <Left>
-          <Button onClick={onBackClick}>{""}</Button>
+          <Top>
+            <LineAndSub>
+              <Line src={line} />
+              <SubTitle>Explore my web portfolio</SubTitle>
+            </LineAndSub>
+            <Button onClick={onBackClick}>{""}</Button>
+          </Top>
           <List>
             {data.map((item) => (
               <ListItem key={item} text={item} onClick={() => setWork(item)}>

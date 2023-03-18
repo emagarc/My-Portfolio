@@ -16,7 +16,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: space-between; */
   user-select: none;
 
   img {
@@ -56,6 +56,7 @@ const Container = styled.div`
   justify-content: space-between;
   max-width: 100vw;
   margin-top: -50px;
+  margin-left: 100px;
 `;
 
 const Left = styled.div`
