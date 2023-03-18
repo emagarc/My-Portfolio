@@ -1,13 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Navbar from "./NavBar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import meToon2 from "../public/images/meToon2.png";
-import ScrollArrow from "./ScrollArrow";
 import Intro from "./Intro";
 import AboutMe from "./AboutMe";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import ScrollArrow from "./ScrollArrow";
 
 const Section = styled.div`
   height: 100%;
@@ -17,6 +17,12 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
+
+  img {
+    pointer-events: none; /* añadir propiedad pointer-events para deshabilitar el arrastre de imágenes con el mouse */
+  }
+
   .fade-enter {
     opacity: 0;
     transform: translateY(50px);
@@ -136,11 +142,11 @@ const Hero = () => {
           </TransitionGroup>
         </Left>
         <Right>
-          <Canvas shadowMap>
+          <Canvas>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} castShadow />
-            <Sphere args={[1, 100, 200]} scale={2} castShadow>
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 100, 200]} scale={2}>
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}
@@ -150,7 +156,7 @@ const Hero = () => {
             </Sphere>
             <mesh receiveShadow>
               <planeBufferGeometry args={[10, 10]} />
-              <shadowMaterial opacity={0.3} />
+              <shadowMaterial opacity={0.1} />
             </mesh>
           </Canvas>
           <ImgH src={meToon2} />
