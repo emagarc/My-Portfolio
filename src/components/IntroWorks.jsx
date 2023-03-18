@@ -50,14 +50,22 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
+  box-shadow: inset 0px 0px 0px 2.5px rgba(0, 0, 0, 0.4);
   background-color: #da4ea2;
-  color: white;
+  color: #f2f2f2;
   font-weight: 500;
-  width: 120px;
+  height: 35px;
+  width: 100px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 9999;
+  white-space: nowrap;
+
+  &:active {
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 const IntroWorks = ({ setIntro }) => {

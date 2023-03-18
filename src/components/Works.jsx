@@ -13,12 +13,16 @@ const Section = styled.div`
 const Works = () => {
   const [Intro, setIntro] = useState("IntroWorks");
 
+  const handleBackClick = () => {
+    setIntro("IntroWorks");
+  };
+
   return (
     <Section>
       {Intro === "IntroWorks" ? (
         <IntroWorks setIntro={setIntro} />
       ) : Intro === "WorkList" ? (
-        <WorksList />
+        <WorksList onBackClick={handleBackClick} />
       ) : (
         <IntroWorks setIntro={setIntro} />
       )}

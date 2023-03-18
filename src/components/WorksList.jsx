@@ -49,6 +49,9 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
 `;
 
 const List = styled.ul`
@@ -59,7 +62,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;
@@ -103,7 +106,37 @@ const Right = styled.div`
     `}
 `;
 
-const WorksList = () => {
+const Button = styled.button`
+  margin-top: 2px;
+  box-shadow: inset 0px 0px 0px 2.5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  background-color: #da4ea2;
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 10px;
+  width: 35px;
+  height: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
+
+  &::before {
+    content: "X";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+  }
+
+  &:active {
+    top: 2px;
+  }
+`;
+
+const WorksList = ({ onBackClick }) => {
   const [Work, setWork] = useState("Henry Cinema");
   const { showStars } = useContext(StarsContext);
 
@@ -111,6 +144,7 @@ const WorksList = () => {
     <Section>
       <Container>
         <Left>
+          <Button onClick={onBackClick}>{""}</Button>
           <List>
             {data.map((item) => (
               <ListItem key={item} text={item} onClick={() => setWork(item)}>
