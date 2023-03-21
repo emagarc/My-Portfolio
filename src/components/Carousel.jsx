@@ -22,7 +22,6 @@ const CarouselContainer = styled.div`
 const Inner = styled.div`
   white-space: nowrap;
   transition: transform 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 `;
 
 const CarouselButtons = styled.div`
@@ -37,15 +36,17 @@ const ButtonArrow = styled.button`
   cursor: pointer;
   margin-top: 20px;
   margin: 5px;
-  color: white;
+  color: #da4ea2;
+  padding: 10px;
 `;
 
 const IndicatorButtons = styled.button`
   border: none;
   cursor: pointer;
   background: none;
-  color: white;
+  color: #da4ea2;
   margin: 5px;
+  padding: 10px;
 `;
 
 const Indicators = styled.div`
@@ -70,47 +71,48 @@ const Carousel = () => {
   const items = [
     {
       title: "Home Day Mode",
-      description: "blah blah",
+      description: "Homepage in daylight mode",
       icon: HomeDM,
     },
     {
       title: "Home Night Mode",
-      description: "blah blah",
+      description: "Homepage in nightlight mode",
       icon: HomeNM,
     },
     {
       title: "Movies Section",
-      description: "blah blah",
+      description:
+        "Movies section, where you can search and filter by genre, rating, and score",
       icon: MoviesSection,
     },
     {
       title: "Food and Drinks",
-      description: "blah blah",
+      description: "Food and beverage section",
       icon: FoodAndDrinks,
     },
     {
       title: "Shopping Bag",
-      description: "blah blah",
+      description: "Adding products to the shopping bag",
       icon: ShoppingBag,
     },
     {
       title: "Reviews",
-      description: "blah blah",
+      description: "Reviews section",
       icon: Reviews,
     },
     {
       title: "Dashboard",
-      description: "blah blah",
+      description: "Administrative dashboard accessible only to admin users.",
       icon: Dashboard,
     },
     {
       title: "Foods List",
-      description: "blah blah",
+      description: "Stock lists in the administrative dashboard.",
       icon: FoodsList,
     },
     {
       title: "Team",
-      description: "blah blah",
+      description: "All the members who contributed to the project.",
       icon: Team,
     },
   ];

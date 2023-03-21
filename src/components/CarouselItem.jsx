@@ -24,11 +24,12 @@ const ImageCarousel = styled.img`
 `;
 
 const TextCarousel = styled.div`
-  font-size: 1.15rem;
+  font-style: italic;
+  font-size: 1.2rem;
   margin: 40px 0 40px 0;
   padding: 0 20px 0 20px;
   white-space: normal;
-  color: black;
+  color: #da4ea2;
 `;
 
 export const CarouselItem = ({ item }) => {
