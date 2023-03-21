@@ -39,6 +39,12 @@ const Description = styled.div`
   margin-top: 20px; /* Espacio mediano */
   line-height: 1.5; /* Interlineado legible */
   text-align: justify; /* Texto justificado */
+  background-color: #2c065d;
+  border: 1px solid #da4ea2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #da4ea2;
+  z-index: 9999;
+  padding: 15px;
 `;
 
 const ButtonContainer = styled.div`
