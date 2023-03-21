@@ -28,7 +28,7 @@ const CarouselContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #2c065d;
-  border: 0.5px solid #da4ea2;
+  border: 1px solid #da4ea2;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #da4ea2;
   z-index: 9999;

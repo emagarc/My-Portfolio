@@ -20,7 +20,9 @@ const ContentContainer = styled.div`
 const ImageCarousel = styled.img`
   width: 700px;
   height: 400px;
-  padding: 0 20px 0 20px;
+  border: 0.5px solid #da4ea2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #da4ea2;
 `;
 
 const TextCarousel = styled.div`
