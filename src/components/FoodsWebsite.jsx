@@ -30,6 +30,8 @@ const CarouselContainer = styled.div`
 `;
 
 const Description = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 1.2rem;
   margin-top: 20px; /* Espacio mediano */
   line-height: 1.5; /* Interlineado legible */
@@ -43,7 +45,6 @@ const Description = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin-bottom: 15px;
   align-self: flex-end;
   z-index: 9999;
 `;
@@ -93,11 +94,6 @@ const FoodsWebsite = () => {
   ];
   return (
     <Container>
-      <ButtonContainer>
-        <a href="https://henry-cinemafront-production.up.railway.app/">
-          <Button>Visit Website</Button>
-        </a>
-      </ButtonContainer>
       <CarouselContainer>
         <Carousel items={items} />
       </CarouselContainer>
@@ -112,6 +108,11 @@ const FoodsWebsite = () => {
         search by name. Additionally, there is a form with validators that
         allows users to create their own recipe. This was my first project,
         which is why I hold it in high regard.
+        <ButtonContainer>
+          <a href="https://henry-cinemafront-production.up.railway.app/">
+            <Button>Visit Website</Button>
+          </a>
+        </ButtonContainer>
       </Description>
     </Container>
   );
