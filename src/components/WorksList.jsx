@@ -40,14 +40,14 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1400px;
+  width: 1550px;
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
 `;
 
 const Top = styled.div`
-  margin-left: 90px;
+  align-self: flex-start;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -70,9 +70,10 @@ const SubTitle = styled.h2`
 `;
 
 const Left = styled.div`
+  margin-left: 100px;
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   gap: 50px;

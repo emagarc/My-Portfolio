@@ -1,6 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "./Carousel";
+import Dashboard from "../public/images/HenryCinema/Dashboard.png";
+import FoodAndDrinks from "../public/images/HenryCinema/FoodAndDrinks.png";
+import FoodsList from "../public/images/HenryCinema/FoodsList.png";
+import HomeDM from "../public/images/HenryCinema/HomeDM.png";
+import HomeNM from "../public/images/HenryCinema/HomeNM2.png";
+import MoviesSection from "../public/images/HenryCinema/MoviesSection.png";
+import Reviews from "../public/images/HenryCinema/Reviews.png";
+import ShoppingBag from "../public/images/HenryCinema/ShoppingBag.png";
+import Team from "../public/images/HenryCinema/Team.png";
 
 const Container = styled.div`
   text-align: left;
@@ -33,8 +42,9 @@ const Description = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 20px;
-  align-self: flex-start;
+  margin-bottom: 15px;
+  align-self: flex-end;
+  z-index: 9999;
 `;
 
 const Button = styled.button`
@@ -57,10 +67,63 @@ const Button = styled.button`
 `;
 
 const HenryCinema = () => {
+  const items = [
+    {
+      title: "Home Day Mode",
+      description: "Homepage in daylight mode",
+      icon: HomeDM,
+    },
+    {
+      title: "Home Night Mode",
+      description: "Homepage in nightlight mode",
+      icon: HomeNM,
+    },
+    {
+      title: "Movies Section",
+      description:
+        "Movies section, where you can search and filter by genre, rating, and score",
+      icon: MoviesSection,
+    },
+    {
+      title: "Food and Drinks",
+      description: "Food and beverage section",
+      icon: FoodAndDrinks,
+    },
+    {
+      title: "Shopping Bag",
+      description: "Adding products to the shopping bag",
+      icon: ShoppingBag,
+    },
+    {
+      title: "Reviews",
+      description: "Reviews section",
+      icon: Reviews,
+    },
+    {
+      title: "Dashboard",
+      description: "Administrative dashboard accessible only to admin users.",
+      icon: Dashboard,
+    },
+    {
+      title: "Foods List",
+      description: "Stock lists in the administrative dashboard.",
+      icon: FoodsList,
+    },
+    {
+      title: "Team",
+      description: "All the members who contributed to the project.",
+      icon: Team,
+    },
+  ];
   return (
     <Container>
+      <ButtonContainer>
+        <a href="https://henry-cinemafront-production.up.railway.app/">
+          <Button>Visit Website</Button>
+        </a>
+      </ButtonContainer>
       <CarouselContainer>
-        <Carousel />
+        <Carousel items={items} />
       </CarouselContainer>
       <Description>
         Henry Cinema is a web application created by a team of developers as
@@ -75,11 +138,6 @@ const HenryCinema = () => {
         manage movies, functions, products, and comments. Overall, Henry Cinema
         offers a complete and personalized shopping experience for cinema-goers.
       </Description>
-      <ButtonContainer>
-        <a href="https://henry-cinemafront-production.up.railway.app/">
-          <Button>Visit Website</Button>
-        </a>
-      </ButtonContainer>
     </Container>
   );
 };
