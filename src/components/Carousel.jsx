@@ -29,6 +29,12 @@ const ButtonArrow = styled.button`
   margin: 5px;
   color: #da4ea2;
   padding: 10px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.7s ease-in-out;
+  &:active {
+    transform: translateY(10px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition-delay: 0.05s;
+  }
 `;
 
 const IndicatorButtons = styled.button`
@@ -39,6 +45,12 @@ const IndicatorButtons = styled.button`
     props.index === props.activeIndicator ? "white" : "#da4ea2"};
   margin: 5px;
   padding: 10px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.7s ease-in-out;
+  &:active {
+    transform: translateY(10px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition-delay: 0.05s;
+  }
 `;
 
 const Indicators = styled.div`

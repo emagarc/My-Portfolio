@@ -22,8 +22,7 @@ const Section = styled.div`
   .fade-enter-active {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 300ms ease-in-out,
-      transform 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out-cubic;
   }
 
   .fade-exit {
@@ -34,8 +33,7 @@ const Section = styled.div`
   .fade-exit-active {
     opacity: 0;
     transform: translateY(0px);
-    transition: opacity 300ms ease-in-out,
-      transform 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out-cubic;
   }
 `;
 
