@@ -15,15 +15,13 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-particles-js": "^3.6.0",
     "react-router-dom": "^6.9.0",
     "react-simple-maps": "^3.0.0",
     "react-spring": "^9.7.1",
     "react-transition-group": "^4.4.5",
     "styled-components": "^5.3.8",
     "three": "^0.150.1",
-    "troika-three-text": "^0.47.1",
-    "tsparticles": "1.29.0"
+    "troika-three-text": "^0.47.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
