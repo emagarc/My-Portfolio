@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import FoodsWebsite from "./FoodsWebsite";
 import HenryCinema from "./HenryCinema";
 import { StarsContext } from "../App";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import line from "../public/images/Wallpapers/line.png";
 
 const data = ["Henry Cinema", "Foods Website"];
@@ -183,17 +182,13 @@ const WorksList = ({ onBackClick }) => {
           </List>
         </Left>
         <Right showStars={showStars}>
-          <TransitionGroup>
-            <CSSTransition key={Work} classNames="fade" timeout={300}>
-              {Work === "Henry Cinema" ? (
-                <HenryCinema />
-              ) : Work === "Foods Website" ? (
-                <FoodsWebsite />
-              ) : (
-                <HenryCinema />
-              )}
-            </CSSTransition>
-          </TransitionGroup>
+          {Work === "Henry Cinema" ? (
+            <HenryCinema />
+          ) : Work === "Foods Website" ? (
+            <FoodsWebsite />
+          ) : (
+            <HenryCinema />
+          )}
         </Right>
       </Container>
     </Section>
