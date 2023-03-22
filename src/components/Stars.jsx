@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { StarsContext } from "../App";
 
 const AnimatedDiv = styled(animated.div)`
-  position: absolute;
+  position: fixed;
   top: ${(props) => props.y}px;
   left: ${(props) => props.x}px;
   width: ${(props) => props.size}px;

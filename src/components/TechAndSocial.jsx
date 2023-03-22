@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import SocialMedia from "./SocialMedia";
 import Technologies from "./Technologies";
 import { StarsContext } from "../App";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const data = ["Technologies", "Social Media"];
 
@@ -120,17 +119,13 @@ const TechAndSocial = () => {
           </List>
         </Left>
         <Right showStars={showStars}>
-          <TransitionGroup>
-            <CSSTransition key={Thing} classNames="fade" timeout={300}>
-              {Thing === "Technologies" ? (
-                <Technologies />
-              ) : Thing === "Social Media" ? (
-                <SocialMedia />
-              ) : (
-                <Technologies />
-              )}
-            </CSSTransition>
-          </TransitionGroup>
+          {Thing === "Technologies" ? (
+            <Technologies />
+          ) : Thing === "Social Media" ? (
+            <SocialMedia />
+          ) : (
+            <Technologies />
+          )}
         </Right>
       </Container>
     </Section>
