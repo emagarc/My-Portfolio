@@ -4,7 +4,7 @@ import Navbar from "./NavBar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import meToon2 from "../public/images/Me/meToon2.png";
-import Intro from "./Intro";
+import IntroHero from "./IntroHero";
 import AboutMe from "./AboutMe";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import ScrollArrow from "./ScrollArrow";
@@ -127,17 +127,16 @@ const Hero = () => {
 
   return (
     <Section ref={containerRef}>
-      <Navbar />
       <Container>
         <Left>
           <TransitionGroup>
             <CSSTransition key={currentContent} classNames="fade" timeout={300}>
               {currentContent === "Intro" ? (
-                <Intro onClick={() => setCurrentContent("AboutMe")} />
+                <IntroHero onClick={() => setCurrentContent("AboutMe")} />
               ) : currentContent === "AboutMe" ? (
                 <AboutMe onBackClick={handleBackClick} />
               ) : (
-                <Intro />
+                <IntroHero />
               )}
             </CSSTransition>
           </TransitionGroup>

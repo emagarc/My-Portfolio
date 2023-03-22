@@ -1,21 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import search from "../public/images/Nav/search.png";
+import logoEG from "../public/images/Nav/logoEG.png";
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  background-color: #3d1c56;
+  z-index: 9999;
+  background-color: #2c065d;
+  border: 0.5px solid #da4ea2;
+  border-radius: 5px;
+  z-index: 9999;
 `;
 
 const Container = styled.div`
-  width: 1400px;
+  width: 1300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 `;
 
 const Links = styled.div`
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -28,23 +38,10 @@ const List = styled.ul`
 const ListItem = styled.li`
   cursor: pointer;
 `;
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
+
 const Icon = styled.img`
-  width: 20px;
+  width: 130px;
   cursor: pointer;
-`;
-const Button = styled.button`
-  width: 100px;
-  padding: 10px;
-  background-color: #da4ea2;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
 `;
 
 const Navbar = () => {
@@ -52,7 +49,7 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          EG
+          <Icon src={logoEG} />
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Studio</ListItem>
@@ -60,10 +57,6 @@ const Navbar = () => {
             <ListItem>Contact</ListItem>
           </List>
         </Links>
-        <Icons>
-          <Icon src={search} alt="Search Icon" />
-          <Button>Hire Now</Button>
-        </Icons>
       </Container>
     </Section>
   );

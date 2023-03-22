@@ -55,7 +55,7 @@ const Button = styled.button`
   }
 `;
 
-const Intro = ({ onClick }) => {
+const IntroHero = ({ onClick }) => {
   return (
     <Container>
       <Title>
@@ -73,4 +73,4 @@ const Intro = ({ onClick }) => {
   );
 };
 
-export default Intro;
+export default IntroHero;
