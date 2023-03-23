@@ -57,7 +57,7 @@ const Text = styled.p`
 `;
 
 const ButtonContainer = styled.div`
-  margin-bottom: 0px;
+  margin-top: 15px;
   align-self: flex-end;
   z-index: 9999;
 `;
@@ -139,7 +139,7 @@ const HenryCinema = () => {
         <Text>
           Henry Cinema is a web application created by a team of developers as
           part of their full-stack web developer course. The app allows users to
-          purchase cinema tickets with ease, select showtimes, and buy
+          purchase cinema tickets with ease, select showtimes, seats, and buy
           complementary items like food and drinks. The app features a rating
           and commenting system for currently showing movies. Security and
           comfort are ensured with the use of the secure payment platform
