@@ -34,7 +34,7 @@ const SubTitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: justify;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -80,8 +80,8 @@ const ContainerDesc = styled.div`
   margin-top: 20px;
   background-color: #2c065d;
 
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #da4ea2;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px #2c065d;
   z-index: 9999;
   padding: 20px;
 `;
@@ -89,7 +89,7 @@ const ContainerDesc = styled.div`
 const Icon = styled.img`
   margin-right: 5px;
   user-select: none;
-  width: 140px;
+  width: 180px;
   align-self: flex-end;
   pointer-events: none;
 `;

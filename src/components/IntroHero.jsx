@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 25px;
+  z-index: 9999;
 `;
 
 const Title = styled.h1`
@@ -31,10 +32,25 @@ const SubTitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 24px;
+  font-size: 1.4rem;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.8;
+`;
+
+const DescContainer = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  background-color: #2c065d;
+
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px #2c065d;
+  z-index: 9999;
+  padding: 20px;
 `;
 
 const Button = styled.button`
@@ -65,15 +81,17 @@ const IntroHero = ({ onClick }) => {
         <Line src={line} />
         <SubTitle>What I Do</SubTitle>
       </WhatIDo>
-      <Desc>
-        I enjoy creating deligthful, human-centered digital experiences.
-        <br />
-        To access all the sections of the portfolio, simply scroll down the page
-        or use the space bar and arrows to navigate. Once you reach a section,
-        click on the corresponding button to view its content.
-        <br />
-        Please start by clicking the button below and learn more about me.
-      </Desc>
+      <DescContainer>
+        <Desc>
+          I enjoy creating deligthful, human-centered digital experiences.
+          <br />
+          To access all the sections of the portfolio, simply scroll down the
+          page or use the space bar and arrows to navigate. Once you reach a
+          section, click on the corresponding button to view its content.
+          <br />
+          Please start by clicking the button below and learn more about me.
+        </Desc>
+      </DescContainer>
       <Button onClick={onClick}>About Me</Button>
     </Container>
   );

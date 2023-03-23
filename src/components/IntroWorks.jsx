@@ -46,11 +46,27 @@ const SubTitle = styled.h2`
   color: #da4ea2;
 `;
 
+const DescContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  background-color: #2c065d;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px #2c065d;
+  z-index: 9999;
+  padding: 20px;
+`;
+
 const Desc = styled.p`
-  font-size: 24px;
+  align-items: justify;
+  font-size: 1.4rem;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
-  opacity: 0.8;
+  background-color: #2c065d;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px #2c065d;
+  z-index: 9999;
 `;
 
 const Button = styled.button`
@@ -96,13 +112,15 @@ const IntroWorks = ({ setIntro }) => {
         </Title>
         <WhatWeDo>
           <Line src={line} />
-          <SubTitle>Projects which I have been working on</SubTitle>
+          <SubTitle>Projects</SubTitle>
         </WhatWeDo>
-        <Desc>
-          By clicking below, you will see a list of my projects. <br />
-          Please note that you can visit each project's website by clicking on
-          the button below its respective description.
-        </Desc>
+        <DescContainer>
+          <Desc>
+            By clicking below, you will see a list of my projects. <br />
+            Please note that you can visit each project's website by clicking on
+            the button below its respective description.
+          </Desc>
+        </DescContainer>
         {!buttonClicked && <Button onClick={handleClick}>See my works</Button>}
       </Right>
     </Container>

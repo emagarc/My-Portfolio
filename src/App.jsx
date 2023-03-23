@@ -53,11 +53,11 @@ function StarsProvider({ children }) {
 
   useEffect(() => {
     const newStars = [];
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 300; i++) {
       newStars.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        size: Math.random() * 3 + 1,
+        size: Math.random() * 5 + 1,
       });
     }
     setStars(newStars);
@@ -74,10 +74,10 @@ function App() {
       <DivStar />
       <StarsProvider>
         <Container>
-          <Hero id="section1" />
-          <Works id="section2" />
-          <TechAndSocial id="section3" />
-          <Contact id="section4" />
+          <Hero />
+          <Works />
+          <TechAndSocial />
+          <Contact />
         </Container>
         <Stars />
       </StarsProvider>

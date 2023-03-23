@@ -78,7 +78,7 @@ const Carousel = ({ items }) => {
     <CarouselContainer>
       <Inner style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {items.map((item) => {
-          return <CarouselItem item={item} />;
+          return <CarouselItem item={item} key={item.title} />;
         })}
       </Inner>
       <CarouselButtons>

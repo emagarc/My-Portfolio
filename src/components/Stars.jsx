@@ -10,8 +10,8 @@ const AnimatedDiv = styled(animated.div)`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   border-radius: 50%;
-  background-color: #fff;
-  opacity: 0;
+  background-color: whitesmoke;
+  opacity: 0.8;
 `;
 
 const Stars = () => {
@@ -26,12 +26,15 @@ const Stars = () => {
     stars.length,
     stars.map(({ x, y }) => ({
       from: { x, y, opacity: 1 },
+      immediate: true, // animación inicial sin transición
       to: async (next) => {
         await next({ opacity: 0.6 });
         while (true) {
+          // Cambiar la posición solo después de que pase un tiempo aleatorio
           await next({
             x: x + Math.random() * 20 - 10,
             y: y + Math.random() * 20 - 10,
+            delay: Math.random() * 1000,
           });
         }
       },
