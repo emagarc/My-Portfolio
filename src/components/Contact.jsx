@@ -50,13 +50,17 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
   color: white;
   border: none;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
+  z-index: 9999;
+  box-shadow: inset 0px 0px 0px 2.5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  background-color: #da4ea2;
+  color: #f2f2f2;
 `;
 
 const Right = styled.div`
@@ -92,7 +96,7 @@ const Contact = () => {
   };
 
   return (
-    <Section>
+    <Section name="contact">
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>

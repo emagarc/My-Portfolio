@@ -67,6 +67,12 @@ const IntroHero = ({ onClick }) => {
       </WhatIDo>
       <Desc>
         I enjoy creating deligthful, human-centered digital experiences.
+        <br />
+        To access all the sections of the portfolio, simply scroll down the page
+        or use the space bar and arrows to navigate. Once you reach a section,
+        click on the corresponding button to view its content.
+        <br />
+        Please start by clicking the button below and learn more about me.
       </Desc>
       <Button onClick={onClick}>About Me</Button>
     </Container>

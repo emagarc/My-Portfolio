@@ -47,6 +47,13 @@ const Description = styled.div`
   box-shadow: 0px 0px 5px #da4ea2;
   z-index: 9999;
   padding: 15px;
+  color: #f2f2f2;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+`;
+
+const Text = styled.p`
+  opacity: 0.8;
 `;
 
 const ButtonContainer = styled.div`
@@ -129,17 +136,20 @@ const HenryCinema = () => {
         <Carousel items={items} />
       </CarouselContainer>
       <Description>
-        Henry Cinema is a web application created by a team of developers as
-        part of their full-stack web developer course. The app allows users to
-        purchase cinema tickets with ease, select showtimes, and buy
-        complementary items like food and drinks. The app features a rating and
-        commenting system for currently showing movies. Security and comfort are
-        ensured with the use of the secure payment platform Mercado Pago. The
-        intuitive user interface and efficient booking and purchasing system
-        make for a hassle-free experience. The app also features an
-        administrative panel for administrators to view app statistics and
-        manage movies, functions, products, and comments. Overall, Henry Cinema
-        offers a complete and personalized shopping experience for cinema-goers.
+        <Text>
+          Henry Cinema is a web application created by a team of developers as
+          part of their full-stack web developer course. The app allows users to
+          purchase cinema tickets with ease, select showtimes, and buy
+          complementary items like food and drinks. The app features a rating
+          and commenting system for currently showing movies. Security and
+          comfort are ensured with the use of the secure payment platform
+          Mercado Pago. The intuitive user interface and efficient booking and
+          purchasing system make for a hassle-free experience. The app also
+          features an administrative panel for administrators to view app
+          statistics and manage movies, functions, products, and comments.
+          Overall, Henry Cinema offers a complete and personalized shopping
+          experience for cinema-goers.
+        </Text>
         <ButtonContainer>
           <a href="https://henry-cinemafront-production.up.railway.app/">
             <Button>Visit Website</Button>

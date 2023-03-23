@@ -1,13 +1,11 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Navbar from "./NavBar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import meToon2 from "../public/images/Me/meToon2.png";
 import IntroHero from "./IntroHero";
 import AboutMe from "./AboutMe";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import ScrollArrow from "./ScrollArrow";
 
 const Section = styled.div`
   height: 100%;
@@ -162,7 +160,6 @@ const Hero = () => {
           <ImgH src={meToon2} />
         </Right>
       </Container>
-      <ScrollArrow />
     </Section>
   );
 };

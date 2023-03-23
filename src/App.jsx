@@ -74,10 +74,10 @@ function App() {
       <DivStar />
       <StarsProvider>
         <Container>
-          <Hero />
-          <Works />
-          <TechAndSocial />
-          <Contact />
+          <Hero id="section1" />
+          <Works id="section2" />
+          <TechAndSocial id="section3" />
+          <Contact id="section4" />
         </Container>
         <Stars />
       </StarsProvider>
