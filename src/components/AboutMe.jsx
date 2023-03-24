@@ -34,7 +34,7 @@ const SubTitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   text-align: justify;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -76,7 +76,7 @@ const ContainerDesc = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   margin-top: 20px;
   background-color: #2c065d;
 
@@ -106,19 +106,27 @@ const AboutMe = ({ onBackClick }) => {
       </WhatIDo>
       <ContainerDesc>
         <Desc>
-          My name is Emanuel, and I am a fullstack web developer. Additionally,
-          I hold a Bachelor's degree in Business Administration. I currently
-          reside in Cordoba, Argentina, and at 29 years old, my passion for
-          technology led me to complete a comprehensive course in fullstack web
-          development to expand my skills and knowledge in this area. Since
-          then, I have worked on various projects, allowing me to gain
-          experience in the field of web development. I enjoy tackling new
-          challenges and working in teams to achieve successful outcomes. In
-          this web portfolio, you will find a selection of my best works and
-          projects I have worked on. I hope you enjoy what you see and that we
-          can collaborate on future projects. Thank you for visiting my site,
-          and please do not hesitate to contact me if you have any questions or
-          are interested in working with me.
+          Hello everyone! My name is Emanuel, and I am a Fullstack web
+          developer. I consider myself a passionate individual who enjoys
+          storytelling and creating unique experiences for my users. Although I
+          have a Bachelor's degree in Business Administration, after some work
+          experiences and travels that allowed me to meet people from all over
+          the world, I found myself immersed in the world of programming. That's
+          why, at 29 years old, I made a radical change and completed a
+          comprehensive course in Fullstack web development. Since then, I have
+          worked on various projects that have allowed me to acquire valuable
+          experience. I currently reside in Cordoba, Argentina, and as you can
+          see, my native language is Spanish. However, I have been studying
+          English since a very young age, and living abroad for some years has
+          allowed me to improve the language considerably and have an advanced
+          proficiency in it. What I enjoy most about my work is learning new
+          technologies, tackling new challenges, and working in teams to create
+          innovative and effective solutions. In my web portfolio, you will find
+          some of my best works and projects I have participated in. I hope you
+          enjoy what you see, and we can collaborate on future projects. Thank
+          you very much for your attention, and please do not hesitate to
+          contact me if you have any questions or simply want to chat about
+          technology!
         </Desc>
         <Icon src={logoEG} />
       </ContainerDesc>

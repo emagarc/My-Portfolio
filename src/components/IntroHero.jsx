@@ -89,7 +89,7 @@ const IntroHero = ({ onClick }) => {
           page or use the space bar and arrows to navigate. Once you reach a
           section, click on the corresponding button to view its content.
           <br />
-          Please start by clicking the button below and learn more about me.
+          Please start by clicking the button below.
         </Desc>
       </DescContainer>
       <Button onClick={onClick}>About Me</Button>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { useSprings, animated } from "react-spring";
 import styled from "styled-components";
 import { StarsContext } from "../App";
@@ -22,9 +22,11 @@ const Stars = () => {
     return null;
   }
 
+  const starsMemo = useMemo(() => stars, [stars]);
+
   const springs = useSprings(
     stars.length,
-    stars.map(({ x, y }) => ({
+    starsMemo.map(({ x, y }) => ({
       from: { x, y, opacity: 1 },
       immediate: true, // animación inicial sin transición
       to: async (next) => {
@@ -46,7 +48,7 @@ const Stars = () => {
   return (
     <>
       {springs.map((props, index) => (
-        <AnimatedDiv key={index} style={props} {...stars[index]} />
+        <AnimatedDiv key={index} style={props} {...starsMemo[index]} />
       ))}
     </>
   );

@@ -47,28 +47,27 @@ const DivFather = styled.div`
 //Definimos el contexto para compartir los datos de las estrellas
 export const StarsContext = createContext([]);
 
-// Definimos el componente StarsProvider que provee los datos de las estrellas
-function StarsProvider({ children }) {
-  const [stars, setStars] = useState([]);
-
-  useEffect(() => {
-    const newStars = [];
-    for (let i = 0; i < 300; i++) {
-      newStars.push({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 5 + 1,
-      });
-    }
-    setStars(newStars);
-  }, []);
-
-  return (
-    <StarsContext.Provider value={stars}>{children}</StarsContext.Provider>
-  );
-}
-
 function App() {
+  // Definimos el componente StarsProvider que provee los datos de las estrellas
+  function StarsProvider({ children }) {
+    const [stars, setStars] = useState([]);
+
+    useEffect(() => {
+      const newStars = [];
+      for (let i = 0; i < 200; i++) {
+        newStars.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          size: Math.random() * 5 + 1,
+        });
+      }
+      setStars(newStars);
+    }, []);
+
+    return (
+      <StarsContext.Provider value={stars}>{children}</StarsContext.Provider>
+    );
+  }
   return (
     <DivFather>
       <DivStar />

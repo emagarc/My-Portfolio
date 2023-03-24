@@ -10,6 +10,7 @@ import MoviesSection from "../public/images/HenryCinema/MoviesSection.png";
 import Reviews from "../public/images/HenryCinema/Reviews.png";
 import ShoppingBag from "../public/images/HenryCinema/ShoppingBag.png";
 import Team from "../public/images/HenryCinema/Team.png";
+import movieID from "../public/images/HenryCinema/movieID.png";
 
 const Container = styled.div`
   text-align: left;
@@ -37,7 +38,6 @@ const CarouselContainer = styled.div`
 const Description = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
   margin-top: 20px; /* Espacio mediano */
   line-height: 1.5; /* Interlineado legible */
   text-align: justify; /* Texto justificado */
@@ -54,6 +54,7 @@ const Description = styled.div`
 
 const Text = styled.p`
   opacity: 0.8;
+  font-size: 1.1rem;
 `;
 
 const ButtonContainer = styled.div`
@@ -100,6 +101,12 @@ const HenryCinema = () => {
       icon: MoviesSection,
     },
     {
+      title: "Movies Details",
+      description:
+        "Movie details, its trailer, a button to purchase tickets, and the ability to like or comment.",
+      icon: movieID,
+    },
+    {
       title: "Food and Drinks",
       description: "Food and beverage section",
       icon: FoodAndDrinks,
@@ -138,17 +145,18 @@ const HenryCinema = () => {
       <Description>
         <Text>
           Henry Cinema is a web application created by a team of developers as
-          part of their full-stack web developer course. The app allows users to
-          purchase cinema tickets with ease, select showtimes, seats, and buy
-          complementary items like food and drinks. The app features a rating
-          and commenting system for currently showing movies. Security and
-          comfort are ensured with the use of the secure payment platform
-          Mercado Pago. The intuitive user interface and efficient booking and
-          purchasing system make for a hassle-free experience. The app also
-          features an administrative panel for administrators to view app
-          statistics and manage movies, functions, products, and comments.
-          Overall, Henry Cinema offers a complete and personalized shopping
-          experience for cinema-goers.
+          part of their final project for the Fullstack web developer course
+          offered by Henry. The app allows users to purchase cinema tickets with
+          ease, select showtimes, seats, and buy complementary items such as
+          food and drinks. The app features a rating and commenting system for
+          currently showing movies. Security and comfort are ensured with the
+          use of the secure payment platform Mercado Pago. The intuitive user
+          interface and efficient booking and purchasing system provide a
+          hassle-free experience. Additionally, the app includes an
+          administrative panel for administrators to view app statistics and
+          manage movies, functions, products, and comments. Overall, Henry
+          Cinema offers a complete and personalized shopping experience for
+          moviegoers.
         </Text>
         <ButtonContainer>
           <a href="https://henry-cinemafront-production.up.railway.app/">

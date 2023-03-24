@@ -32,7 +32,6 @@ const CarouselContainer = styled.div`
 const Description = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
   margin-top: 20px; /* Espacio mediano */
   line-height: 1.5; /* Interlineado legible */
   text-align: justify; /* Texto justificado */
@@ -54,6 +53,7 @@ const ButtonContainer = styled.div`
 
 const Text = styled.p`
   opacity: 0.8;
+  font-size: 1.1rem;
 `;
 
 const Button = styled.button`
@@ -106,16 +106,17 @@ const FoodsWebsite = () => {
       </CarouselContainer>
       <Description>
         <Text>
-          This project was a prelude to the final project of the FullStack web
-          developer course at Henry. It was an individual project aimed at
-          putting into practice all the knowledge acquired during the bootcamp.
-          Simply put, an API for recipes was used to consume information and
-          display different recipes on the screen. Clicking on each recipe
-          provides detailed information. The website includes a landing page and
-          a main page where recipes are displayed, with the ability to filter by
-          type or search by name. Additionally, there is a form with validators
-          that allows users to create their own recipe. This was my first
-          project, which is why I hold it in high regard.
+          This project served as a precursor to the final project of the
+          FullStack web developer course at Henry. It was an individual project
+          aimed at putting into practice all the knowledge acquired during the
+          bootcamp. Essentially, an API for recipes was used to consume
+          information and display different recipes on the screen. The website
+          includes a landing page and a main page where recipes are displayed,
+          with the ability to filter by type or search by name. Clicking on each
+          recipe provides detailed information about it. Additionally, there is
+          a form with validators that allows users to create their own recipe
+          and display it alongside the rest. This was my first project, which is
+          why I hold it in high regard.
         </Text>
         <ButtonContainer>
           <a href="https://henry-cinemafront-production.up.railway.app/">
