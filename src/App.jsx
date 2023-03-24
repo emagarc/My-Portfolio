@@ -74,9 +74,9 @@ function App() {
       <StarsProvider>
         <Container>
           <Hero />
-          {/* <Works />
+          <Works />
           <TechAndSocial />
-          <Contact /> */}
+          <Contact />
         </Container>
         <Stars />
       </StarsProvider>

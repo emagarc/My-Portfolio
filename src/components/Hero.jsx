@@ -66,7 +66,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 `;
 
@@ -78,9 +78,8 @@ const Left = styled.div`
   gap: 20px;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    align-items: center;
-    gap: 1px;
-    margin-top: 600px;
+    align-items: flex-end;
+    margin-top: 650px;
     height: 0px;
   }
 `;
@@ -93,6 +92,8 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     flex: 1;
     width: 100%;
+    align-self: flex-start;
+    padding-bottom: 100px;
   }
 `;
 
@@ -115,8 +116,9 @@ const ImgH = styled.img`
   animation-iteration-count: infinite, infinite;
 
   @media only screen and (max-width: 768px) {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    padding-bottom: 85px;
   }
 
   @keyframes float {
@@ -175,7 +177,7 @@ const Hero = () => {
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1 * (isSmallScreen ? 1.25 : 2), 100, 200]}>
+            <Sphere args={[1 * (isSmallScreen ? 1 : 2), 100, 200]}>
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}

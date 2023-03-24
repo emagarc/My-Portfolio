@@ -10,6 +10,11 @@ const Container = styled.div`
   justify-content: center;
   gap: 25px;
   margin-top: 20px;
+  @media only screen and (max-width: 768px) {
+    width: 400px;
+    height: 100px;
+    margin-top: 110px;
+  }
 `;
 
 const WhatIDo = styled.div`
@@ -31,6 +36,9 @@ const Line = styled.img`
 const SubTitle = styled.h2`
   color: #da4ea2;
   font-size: 25px;
+  @media only screen and (max-width: 768px) {
+    font-size: 21px;
+  }
 `;
 
 const Desc = styled.p`
@@ -39,6 +47,9 @@ const Desc = styled.p`
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.8;
+  @media only screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Button = styled.button`
@@ -84,6 +95,10 @@ const ContainerDesc = styled.div`
   box-shadow: 0px 0px 5px #2c065d;
   z-index: 9999;
   padding: 20px;
+  @media only screen and (max-width: 768px) {
+    padding: 10px;
+    margin-top: -10px;
+  }
 `;
 
 const Icon = styled.img`
@@ -92,6 +107,9 @@ const Icon = styled.img`
   width: 180px;
   align-self: flex-end;
   pointer-events: none;
+  @media only screen and (max-width: 768px) {
+    width: 120px;
+  }
 `;
 
 const AboutMe = ({ onBackClick }) => {

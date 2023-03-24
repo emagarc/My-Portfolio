@@ -10,8 +10,8 @@ const Container = styled.div`
   gap: 25px;
   z-index: 9999;
   @media only screen and (max-width: 768px) {
-    height: 50vh;
     flex: 1;
+    margin-top: 100px;
   }
 `;
 
@@ -89,8 +89,13 @@ const Button = styled.button`
   }
 
   @media only screen and (max-width: 768px) {
-    width: 90px;
-    height: 35px;
+    font-size: 17px;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    z-index: 100000;
+    align-self: flex-start;
+    border-radius: 15px;
   }
 `;
 
