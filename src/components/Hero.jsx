@@ -6,6 +6,7 @@ import meToon2 from "../public/images/Me/meToon2.png";
 import IntroHero from "./IntroHero";
 import AboutMe from "./AboutMe";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { useMediaQuery } from "@material-ui/core";
 
 const Section = styled.div`
   height: 100%;
@@ -16,6 +17,10 @@ const Section = styled.div`
   align-items: center;
   /* justify-content: space-between; */
   user-select: none;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 
   img {
     pointer-events: none; /* añadir propiedad pointer-events para deshabilitar el arrastre de imágenes con el mouse */
@@ -55,6 +60,14 @@ const Container = styled.div`
   max-width: 100vw;
   margin-top: -50px;
   margin-left: 100px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
 `;
 
 const Left = styled.div`
@@ -63,6 +76,13 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+    gap: 1px;
+    margin-top: 600px;
+    height: 0px;
+  }
 `;
 
 const Right = styled.div`
@@ -70,6 +90,10 @@ const Right = styled.div`
   position: relative;
   z-index: 9999;
   height: 100%;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 const ImgH = styled.img`
@@ -89,6 +113,11 @@ const ImgH = styled.img`
   animation-duration: 3s, 10s;
   animation-timing-function: ease-in-out, linear;
   animation-iteration-count: infinite, infinite;
+
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 
   @keyframes float {
     0% {
@@ -123,6 +152,8 @@ const Hero = () => {
     setCurrentContent("Intro");
   };
 
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
   return (
     <Section ref={containerRef}>
       <Container>
@@ -144,12 +175,12 @@ const Hero = () => {
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2}>
+            <Sphere args={[1 * (isSmallScreen ? 1.25 : 2), 100, 200]}>
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}
                 distort={0.4}
-                speed={1.4}
+                speed={1.5}
               />
             </Sphere>
             <mesh receiveShadow>

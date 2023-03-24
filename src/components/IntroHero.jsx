@@ -9,11 +9,20 @@ const Container = styled.div`
   justify-content: center;
   gap: 25px;
   z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    height: 50vh;
+    flex: 1;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 74px;
   color: #f2f2f2;
+
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    font-size: 44px;
+  }
 `;
 
 const WhatIDo = styled.div`
@@ -36,6 +45,10 @@ const Desc = styled.p`
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.8;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    font-size: 1rem;
+  }
 `;
 
 const DescContainer = styled.div`
@@ -46,11 +59,16 @@ const DescContainer = styled.div`
   gap: 25px;
   margin-top: 20px;
   background-color: #2c065d;
-
   border-radius: 15px;
   box-shadow: 0px 0px 5px #2c065d;
   z-index: 9999;
   padding: 20px;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    margin-top: 3px;
+    padding: 15px;
+    width: 300px;
+  }
 `;
 
 const Button = styled.button`
@@ -68,6 +86,11 @@ const Button = styled.button`
 
   &:active {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 90px;
+    height: 35px;
   }
 `;
 
