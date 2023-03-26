@@ -181,7 +181,7 @@ const Hero = () => {
               <MeshDistortMaterial
                 color="#3D1C56"
                 attach={"material"}
-                distort={0.4}
+                distort={0.25}
                 speed={1.5}
               />
             </Sphere>

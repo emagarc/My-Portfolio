@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { useMediaQuery } from "@material-ui/core";
 
 const Cube = () => {
   const textRef = useRef();
@@ -8,9 +9,10 @@ const Cube = () => {
     (state) =>
       (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2)
   );
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
   return (
     <mesh>
-      <boxGeometry />
+      <boxGeometry args={isSmallScreen ? [0.7, 0.7, 0.7] : [1.2, 1.2, 1.2]} />
       <meshStandardMaterial>
         <RenderTexture attach="map">
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />

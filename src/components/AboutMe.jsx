@@ -66,7 +66,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 100000;
 
   &::before {
     content: "<<";

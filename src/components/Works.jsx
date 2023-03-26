@@ -8,6 +8,10 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+    justify-content: center;
+  }
 `;
 
 const Works = () => {
