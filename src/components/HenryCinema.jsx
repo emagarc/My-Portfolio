@@ -8,7 +8,7 @@ import HomeDM from "../public/images/HenryCinema/HomeDM.png";
 import HomeNM from "../public/images/HenryCinema/HomeNM2.png";
 import MoviesSection from "../public/images/HenryCinema/MoviesSection.png";
 import Reviews from "../public/images/HenryCinema/Reviews.png";
-import ShoppingBag from "../public/images/HenryCinema/ShoppingBag.png";
+import SBag from "../public/images/HenryCinema/SBag.png";
 import Team from "../public/images/HenryCinema/Team.png";
 import movieID from "../public/images/HenryCinema/movieID.png";
 
@@ -131,7 +131,7 @@ const HenryCinema = () => {
     {
       title: "Shopping Bag",
       description: "Adding products to the shopping bag",
-      icon: ShoppingBag,
+      icon: SBag,
     },
     {
       title: "Reviews",
