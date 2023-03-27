@@ -13,6 +13,10 @@ const Table = styled.table`
   color: whitesmoke;
   text-shadow: 5px;
   margin: auto;
+  @media only screen and (max-width: 768px) {
+    border-spacing: 40px 0px;
+    margin-top: 750px;
+  }
 `;
 
 const Container = styled.div`
@@ -21,11 +25,19 @@ const Container = styled.div`
   align-items: center; /* Centrar verticalmente la tabla */
   margin-left: 40px;
   margin-top: 40px;
+  @media only screen and (max-width: 768px) {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 500px;
+  }
 `;
 
 const Td = styled.td`
   padding: 5px;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const DivImage = styled.div`
@@ -82,12 +94,61 @@ const DivImage = styled.div`
       transform: translateX(0);
     }
   }
+  @media only screen and (max-width: 768px) {
+    @keyframes zoom {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(0.8);
+      }
+    }
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+      10% {
+        transform: translateX(-5px);
+      }
+      20% {
+        transform: translateX(5px);
+      }
+      30% {
+        transform: translateX(-5px);
+      }
+      40% {
+        transform: translateX(5px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+      60% {
+        transform: translateX(5px);
+      }
+      70% {
+        transform: translateX(-5px);
+      }
+      80% {
+        transform: translateX(5px);
+      }
+      90% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
 `;
 
 const DivText = styled.div`
   padding-top: 10px;
   text-align: center;
   opacity: 0.6;
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+    padding-top: 1px;
+  }
 `;
 
 const SocialMedia = () => {

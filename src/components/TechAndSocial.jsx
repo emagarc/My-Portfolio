@@ -12,6 +12,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+    justify-content: center;
+  }
   .fade-enter {
     opacity: 0;
     transform: translateY(0px);
@@ -42,12 +46,25 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: -500px;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: flex-start;
+    padding-top: 1000px;
+    margin-bottom: -700px;
+  }
 `;
 
 const List = styled.ul`
@@ -55,6 +72,12 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    gap: 25px;
+    flex-direction: row;
+    padding-bottom: 30px;
+  }
 `;
 
 const ListItem = styled.li`
@@ -64,6 +87,10 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    font-size: 25px;
+    z-index: 100000;
+  }
 
   ::after {
     content: "${(props) => props.text}";
@@ -92,6 +119,12 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+    align-self: flex-start;
+    padding-bottom: 1000px;
+  }
 
   ${(props) =>
     props.showStars &&

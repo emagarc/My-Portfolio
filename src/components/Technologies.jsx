@@ -11,11 +11,18 @@ const Table = styled.table`
   font-size: 20px;
   color: whitesmoke;
   text-shadow: 5px;
+  @media only screen and (max-width: 768px) {
+    border-spacing: 40px 0px;
+    margin-top: 750px;
+  }
 `;
 
 const Td = styled.td`
   padding: 5px;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    padding: 1px;
+  }
 `;
 
 const DivImage = styled.div`
@@ -34,12 +41,29 @@ const DivImage = styled.div`
       transform: scale(1);
     }
   }
+  @media only screen and (max-width: 768px) {
+    @keyframes zoom2 {
+      0% {
+        transform: scale(0.7);
+      }
+      50% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
 `;
 
 const DivText = styled.div`
   padding-top: 10px;
   text-align: center;
   opacity: 0.6;
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+    padding-top: 1px;
+  }
 `;
 
 const Technologies = () => {
