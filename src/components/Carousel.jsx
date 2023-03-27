@@ -8,6 +8,10 @@ const CarouselContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    width: 800px;
+    height: 320px; // redugimos 400 a ambas width y height
+  }
 `;
 
 const Inner = styled.div`
@@ -19,9 +23,13 @@ const CarouselButtons = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    gap: 160px;
+    margin-top: 15px;
+  }
 `;
 
-const ButtonArrow = styled.button`
+const ButtonArrowL = styled.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -34,6 +42,34 @@ const ButtonArrow = styled.button`
     transform: translateY(10px);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     transition-delay: 0.05s;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: 0px;
+    padding: 0px;
+    margin-left: 50px;
+    z-index: 10000;
+  }
+`;
+
+const ButtonArrowR = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin: 5px;
+  color: #da4ea2;
+  padding: 10px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.7s ease-in-out;
+  &:active {
+    transform: translateY(10px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition-delay: 0.05s;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: 0px;
+    padding: 0px;
+    margin-right: 50px;
+    z-index: 10000;
   }
 `;
 
@@ -58,6 +94,10 @@ const Indicators = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    justify-content: center; // redugimos 400 a ambas width y height
+    display: none;
+  }
 `;
 
 const Carousel = ({ items }) => {
@@ -82,13 +122,13 @@ const Carousel = ({ items }) => {
         })}
       </Inner>
       <CarouselButtons>
-        <ButtonArrow
+        <ButtonArrowL
           onClick={() => {
             updateIndex(activeIndex - 1);
           }}
         >
           <span className={`material-symbols-outlined`}>arrow_back_ios</span>
-        </ButtonArrow>
+        </ButtonArrowL>
         <Indicators>
           {items.map((item, index) => {
             return (
@@ -106,13 +146,13 @@ const Carousel = ({ items }) => {
             );
           })}
         </Indicators>
-        <ButtonArrow
+        <ButtonArrowR
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
           <span className={`material-symbols-outlined`}>arrow_forward_ios</span>
-        </ButtonArrow>
+        </ButtonArrowR>
       </CarouselButtons>
     </CarouselContainer>
   );

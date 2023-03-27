@@ -13,6 +13,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+    justify-content: center;
+  }
   .fade-enter {
     opacity: 0;
     transform: translateY(0px);
@@ -41,6 +45,14 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
+  @media only screen and (max-width: 768px) {
+    padding-top: 545px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
 `;
 
 const Top = styled.div`
@@ -49,6 +61,9 @@ const Top = styled.div`
   align-items: center;
   gap: 30px;
   align-self: flex-start;
+  @media only screen and (max-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const LineAndSub = styled.div`
@@ -60,10 +75,17 @@ const LineAndSub = styled.div`
 
 const Line = styled.img`
   height: 5px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SubTitle = styled.h2`
   color: #da4ea2;
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    padding-top: 20px;
+  }
 `;
 
 const Left = styled.div`
@@ -74,6 +96,16 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: flex-start;
+    margin-rigth: 500px;
+    padding-right: 280px;
+    padding-top: 500px;
+    height: 1000px;
+    margin-bottom: -90px;
+    gap: 0px;
+  }
 `;
 
 const List = styled.ul`
@@ -82,6 +114,12 @@ const List = styled.ul`
   flex-direction: column;
   gap: 40px;
   text-align: justify;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    gap: 25px;
+    flex-direction: row;
+    padding-bottom: 30px;
+  }
 `;
 
 const ListItem = styled.li`
@@ -91,6 +129,9 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    font-size: 25px;
+  }
 
   ::after {
     content: "${(props) => props.text}";
@@ -126,6 +167,12 @@ const Right = styled.div`
         center fixed;
       background-size: cover;
     `}
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+    align-self: flex-start;
+    padding-bottom: 1000px;
+  }
 `;
 
 const Button = styled.button`
@@ -143,6 +190,13 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+  }
 
   &::before {
     content: "<<";

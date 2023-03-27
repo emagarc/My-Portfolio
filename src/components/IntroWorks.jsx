@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import line from "../public/images/Wallpapers/line.png";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
+import { useMediaQuery } from "@material-ui/core";
 
 const Container = styled.div`
   height: 100vh;
@@ -13,6 +14,7 @@ const Container = styled.div`
   justify-content: space-between;
   margin-left: 100px;
   @media only screen and (max-width: 768px) {
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -133,10 +135,13 @@ const Button = styled.button`
 
 const IntroWorks = ({ setIntro }) => {
   const [buttonClicked, setButtonClicked] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const [showCube, setShowCube] = useState(true);
 
   const handleClick = () => {
     setButtonClicked(true);
     setIntro("WorkList");
+    setShowCube(false);
   };
 
   return (
@@ -146,7 +151,7 @@ const IntroWorks = ({ setIntro }) => {
           <OrbitControls enableZoom={false} autoRotate />
           <ambientLight intensity={1} />
           <directionalLight position={[3, 2, 1]} />
-          <Cube />
+          {showCube && <Cube isSmallScreen={isSmallScreen} />}
         </Canvas>
       </Left>
       <Right>

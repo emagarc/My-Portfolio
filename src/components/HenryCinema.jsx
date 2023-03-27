@@ -33,6 +33,10 @@ const CarouselContainer = styled.div`
   border-radius: 5px;
   box-shadow: 0px 0px 5px #da4ea2;
   z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    width: 420px; // redugimos 400 a ambas width y height
+    height: 320px;
+  }
 `;
 
 const Description = styled.div`
@@ -50,17 +54,30 @@ const Description = styled.div`
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   opacity: 1;
+  @media only screen and (max-width: 768px) {
+    width: 400px; // redugimos 400 a ambas width y height
+    height: 290px;
+    padding: 10px;
+  }
 `;
 
 const Text = styled.p`
   opacity: 0.8;
   font-size: 1.1rem;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    font-size: 0.8rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
   margin-top: 15px;
   align-self: flex-end;
   z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    margin-top: 0px;
+    margin-right: 5px;
+  }
 `;
 
 const Button = styled.button`
