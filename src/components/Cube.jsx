@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useMediaQuery } from "@material-ui/core";
 
 const Cube = ({ isSmallScreen }) => {
   const textRef = useRef();

@@ -34,7 +34,7 @@ const CarouselContainer = styled.div`
   box-shadow: 0px 0px 5px #da4ea2;
   z-index: 9999;
   @media only screen and (max-width: 768px) {
-    width: 420px; // redugimos 400 a ambas width y height
+    width: 420px;
     height: 320px;
   }
 `;
