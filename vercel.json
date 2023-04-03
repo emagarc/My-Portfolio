@@ -1,0 +1,9 @@
+{
+    "build": {
+        "env": {
+            "BASE_URL": "https://my-portfolio-mnoq5vuvl-emagarc.vercel.app/",
+            "RESOLUTION_WIDTH": "1440",
+            "RESOLUTION_HEIGHT": "900"
+        }
+    }
+}
