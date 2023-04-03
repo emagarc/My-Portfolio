@@ -54,11 +54,11 @@ function App() {
 
     useEffect(() => {
       const newStars = [];
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0; i < 100; i++) {
         newStars.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
-          size: Math.random() * 5 + 1,
+          size: Math.random() * 5 + 3,
         });
       }
       setStars(newStars);
