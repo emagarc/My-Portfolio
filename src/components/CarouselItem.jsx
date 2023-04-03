@@ -6,7 +6,7 @@ const ItemContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 490px;
+  height: 430px;
   background-color: transparent;
   @media only screen and (max-width: 768px) {
     height: 190px;
@@ -26,8 +26,9 @@ const ContentContainer = styled.div`
 `;
 
 const ImageCarousel = styled.img`
-  width: 700px;
-  height: 400px;
+  margin-top: 20px;
+  width: 650px;
+  height: 320px;
   border: 0.5px solid #da4ea2;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #da4ea2;
@@ -39,9 +40,9 @@ const ImageCarousel = styled.img`
 
 const TextCarousel = styled.div`
   font-style: italic;
-  font-size: 1.2rem;
-  margin: 40px 0 40px 0;
-  padding: 0 20px 0 20px;
+  font-size: 1rem;
+  margin: 20px 0 40px 0;
+  padding: 0 10px 0 10px;
   white-space: normal;
   color: #da4ea2;
   @media only screen and (max-width: 768px) {

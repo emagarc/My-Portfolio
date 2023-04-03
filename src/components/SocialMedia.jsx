@@ -6,7 +6,7 @@ import Gmail from "../public/images/Social Media/gmail.png";
 import Github from "../public/images/Technologies/github.png";
 
 const Table = styled.table`
-  border-spacing: 230px 100px;
+  border-spacing: 200px 50px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -159,7 +159,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.linkedin.com/in/emanuel-garc%C3%ADa-226108116">
-                <img src={Linkedin} width="85" height="85" alt="Linkedin" />
+                <img src={Linkedin} width="80" height="80" alt="Linkedin" />
               </a>
             </DivImage>
             <br />
@@ -168,7 +168,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.instagram.com/emagarc/">
-                <img src={Instagram} width="85" height="85" alt="Instagram" />
+                <img src={Instagram} width="80" height="80" alt="Instagram" />
               </a>
             </DivImage>
             <br />
@@ -179,7 +179,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="mailto:mr.emanuel.garcia93@gmail.com">
-                <img src={Gmail} width="85" height="85" alt="Gmail" />
+                <img src={Gmail} width="80" height="80" alt="Gmail" />
               </a>
             </DivImage>
             <br />
@@ -188,7 +188,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://github.com/emagarc">
-                <img src={Github} width="85" height="85" alt="GitHub" />
+                <img src={Github} width="80" height="80" alt="GitHub" />
               </a>
             </DivImage>
             <br />

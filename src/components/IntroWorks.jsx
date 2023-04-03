@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
-  margin-left: 100px;
+  margin-left: 0px;
   @media only screen and (max-width: 768px) {
     height: 100vh;
     width: 100%;
@@ -36,7 +36,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 55px;
   @media only screen and (max-width: 768px) {
     text-align: left;
     font-size: 44px;
@@ -92,8 +92,9 @@ const DescContainer = styled.div`
 
 const Desc = styled.p`
   align-items: justify;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #f2f2f2;
+  opacity: 0.8;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-color: #2c065d;
   border-radius: 15px;

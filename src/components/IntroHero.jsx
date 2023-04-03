@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   z-index: 9999;
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 55px;
   color: #f2f2f2;
 
   @media only screen and (max-width: 768px) {
@@ -41,7 +41,7 @@ const SubTitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.8;
@@ -57,7 +57,7 @@ const DescContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 25px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #2c065d;
   border-radius: 15px;
   box-shadow: 0px 0px 5px #2c065d;
@@ -77,7 +77,7 @@ const Button = styled.button`
   color: #f2f2f2;
   font-weight: 500;
   height: 35px;
-  width: 100px;
+  width: 80px;
   padding: 10px;
   border: none;
   border-radius: 5px;

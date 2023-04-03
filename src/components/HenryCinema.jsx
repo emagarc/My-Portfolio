@@ -13,6 +13,7 @@ import Team from "../public/images/HenryCinema/Team.png";
 import movieID from "../public/images/HenryCinema/movieID.png";
 
 const Container = styled.div`
+  margin-right: 150px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -22,8 +23,8 @@ const Container = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  width: 800px;
-  height: 550px;
+  width: 780px;
+  height: 470px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -63,7 +64,7 @@ const Description = styled.div`
 
 const Text = styled.p`
   opacity: 0.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
   @media only screen and (max-width: 768px) {
     text-align: left;
     font-size: 0.8rem;
@@ -176,8 +177,8 @@ const HenryCinema = () => {
           moviegoers.
         </Text>
         <ButtonContainer>
-          <a href="https://henry-cinemafront-production.up.railway.app/">
-            <Button>Visit Website</Button>
+          <a href="https://github.com/JuanCruzL/Henry-Cinema---FP">
+            <Button>Repository</Button>
           </a>
         </ButtonContainer>
       </Description>

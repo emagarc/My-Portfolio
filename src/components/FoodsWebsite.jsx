@@ -7,6 +7,7 @@ import FoodDetail from "../public/images/FoodsWebsite/FoodDetail.png";
 import FoodsForm from "../public/images/FoodsWebsite/FoodsForm.png";
 
 const Container = styled.div`
+  margin-right: 150px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -16,14 +17,14 @@ const Container = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  width: 800px;
-  height: 550px;
+  width: 780px;
+  height: 470px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #2c065d;
-  border: 0.5px solid #da4ea2;
+  border: 1px solid #da4ea2;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #da4ea2;
   z-index: 9999;
@@ -67,7 +68,7 @@ const ButtonContainer = styled.div`
 
 const Text = styled.p`
   opacity: 0.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
   @media only screen and (max-width: 768px) {
     text-align: left;
     font-size: 0.8rem;
@@ -137,8 +138,8 @@ const FoodsWebsite = () => {
           why I hold it in high regard.
         </Text>
         <ButtonContainer>
-          <a href="https://henry-cinemafront-production.up.railway.app/">
-            <Button>Visit Website</Button>
+          <a href="https://github.com/emagarc/PI-Food-Henry">
+            <Button>Repository</Button>
           </a>
         </ButtonContainer>
       </Description>

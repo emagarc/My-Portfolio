@@ -59,6 +59,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  margin-left: 100px;
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: flex-start;
@@ -81,7 +82,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 80px;
+  font-size: 65px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;

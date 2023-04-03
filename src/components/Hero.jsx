@@ -71,6 +71,7 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
+  margin-left: 35px;
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -99,8 +100,8 @@ const Right = styled.div`
 
 const ImgH = styled.img`
   transform: rotate(5deg) scale(1);
-  width: 550px;
-  height: 350px;
+  width: 390px;
+  height: 290px;
   object-fit: contain;
   position: absolute;
   top: 0;

@@ -43,7 +43,7 @@ const Section = styled.div`
 const Container = styled.div`
   width: 1550px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   @media only screen and (max-width: 768px) {
     padding-top: 545px;
@@ -56,7 +56,7 @@ const Container = styled.div`
 `;
 
 const Top = styled.div`
-  align-self: flex-start;
+  align-self: flex-end;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -112,7 +112,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   text-align: justify;
   @media only screen and (max-width: 768px) {
     text-align: left;
@@ -123,7 +123,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 80px;
+  font-size: 65px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;

@@ -20,6 +20,8 @@ const Inner = styled.div`
 `;
 
 const CarouselButtons = styled.div`
+  padding-bottom: 20px;
+  padding-top: -50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -33,7 +35,6 @@ const ButtonArrowL = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
   margin: 5px;
   color: #da4ea2;
   padding: 10px;
@@ -55,7 +56,6 @@ const ButtonArrowR = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
   margin: 5px;
   color: #da4ea2;
   padding: 10px;
