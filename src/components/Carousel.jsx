@@ -4,7 +4,7 @@ import { CarouselItem } from "./CarouselItem";
 
 const CarouselContainer = styled.div`
   overflow: hidden;
-  width: 800px;
+  width: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,11 +20,11 @@ const Inner = styled.div`
 `;
 
 const CarouselButtons = styled.div`
-  padding-bottom: 20px;
-  padding-top: -50px;
+  margin-bottom: 120px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 10000;
   @media only screen and (max-width: 768px) {
     gap: 160px;
     margin-top: 15px;

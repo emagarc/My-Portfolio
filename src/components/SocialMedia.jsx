@@ -52,10 +52,10 @@ const DivImage = styled.div`
 
   @keyframes zoom {
     0% {
-      transform: scale(1);
+      transform: scale(0.7);
     }
     100% {
-      transform: scale(1.2);
+      transform: scale(0.9);
     }
   }
 
@@ -142,7 +142,7 @@ const DivImage = styled.div`
 `;
 
 const DivText = styled.div`
-  padding-top: 10px;
+  padding-top: 0px;
   text-align: center;
   opacity: 0.6;
   @media only screen and (max-width: 768px) {

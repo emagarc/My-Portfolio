@@ -24,7 +24,7 @@ const Container = styled.div`
 
 const CarouselContainer = styled.div`
   width: 780px;
-  height: 470px;
+  height: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -64,7 +64,7 @@ const Description = styled.div`
 
 const Text = styled.p`
   opacity: 0.8;
-  font-size: 1rem;
+  font-size: 0.9rem;
   @media only screen and (max-width: 768px) {
     text-align: left;
     font-size: 0.8rem;
