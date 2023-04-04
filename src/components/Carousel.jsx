@@ -79,8 +79,8 @@ const IndicatorButtons = styled.button`
   background: none;
   color: ${(props) =>
     props.index === props.activeIndicator ? "white" : "#da4ea2"};
-  margin: 5px;
-  padding: 10px;
+  margin: 2.5px;
+  padding: 5px;
   transition: transform 0.15s ease-in-out, box-shadow 0.7s ease-in-out;
   &:active {
     transform: translateY(10px);
