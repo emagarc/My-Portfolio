@@ -5,8 +5,8 @@ import githubLogoT from "../public/images/Technologies/github.png";
 import styled from "styled-components";
 
 const Table = styled.table`
-  margin-top: 100px;
-  border-spacing: 130px 10px;
+  margin-top: 130px;
+  border-spacing: 100px 1px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -33,13 +33,13 @@ const DivImage = styled.div`
 
   @keyframes zoom2 {
     0% {
-      transform: scale(0.7);
+      transform: scale(0.6);
     }
     50% {
-      transform: scale(0.9);
+      transform: scale(0.8);
     }
     100% {
-      transform: scale(0.7);
+      transform: scale(0.6);
     }
   }
   @media only screen and (max-width: 768px) {
@@ -63,7 +63,7 @@ const DivText = styled.div`
   opacity: 0.6;
   @media only screen and (max-width: 768px) {
     font-size: 18px;
-    padding-top: 1px;
+
   }
 `;
 

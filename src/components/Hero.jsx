@@ -100,8 +100,8 @@ const Right = styled.div`
 
 const ImgH = styled.img`
   transform: rotate(5deg) scale(1);
-  width: 390px;
-  height: 290px;
+  width: 350px;
+  height: 250px;
   object-fit: contain;
   position: absolute;
   top: 0;
