@@ -59,7 +59,7 @@ export const CarouselItem = ({ item }) => {
   return (
     <ItemContainer>
       <ContentContainer>
-        <ImageCarousel src={item.icon} key={item.title} />
+        <ImageCarousel src={item.icon} key={item.title} loading="lazy" />
         <TextCarousel>{item.description}</TextCarousel>
       </ContentContainer>
     </ItemContainer>
