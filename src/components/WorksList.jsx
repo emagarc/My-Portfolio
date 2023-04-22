@@ -61,6 +61,12 @@ const Top = styled.div`
   align-items: center;
   gap: 30px;
   align-self: flex-start;
+  background-color: #2c065d;
+  opacity: 1;
+  z-index: 999999;
+  padding: 10px;
+  border: 0.5px solid #da4ea2;
+  border-radius: 3px;
   @media only screen and (max-width: 768px) {
     flex-direction: row;
   }
@@ -123,39 +129,26 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 65px;
+  font-size: ${(props) => (props.isActive ? "65px" : "57px")};
   font-weight: bold;
   cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
+  color: ${(props) => (props.isActive ? "#da4ea2" : "whitesmoke")};
+  opacity: ${(props) => (props.isActive ? 1 : 0.3)};
+  -webkit-text-stroke: 0.5px red;
   position: relative;
   @media only screen and (max-width: 768px) {
     font-size: 25px;
   }
-
-  ::after {
-    content: "${(props) => props.text}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: pink;
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  &:hover {
-    ::after {
-      animation: moveText 0.5s linear both;
-
-      @keyframes moveText {
-        to {
-          width: 100%;
-        }
-      }
-    }
-  }
+  z-index: 999999
 `;
+
+const ListItemContainer = styled.div`
+background-color:${(props) => (props.isActive ? "#2c065d" : "transparent")};
+opacity: 1;
+z-index: 999999;
+padding: 10px;
+border-radius: 10px;
+`
 
 const Right = styled.div`
   flex: 1;
@@ -229,9 +222,16 @@ const WorksList = ({ onBackClick }) => {
           </Top>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+              <ListItemContainer isActive={Work === item}>
+              <ListItem 
+              key={item} 
+              text={item}
+              isActive={Work === item} 
+              onClick={() => setWork(item)}
+              >
                 {item}
               </ListItem>
+              </ListItemContainer>
             ))}
           </List>
         </Left>
