@@ -64,9 +64,9 @@ const Top = styled.div`
   background-color: #2c065d;
   opacity: 1;
   z-index: 999999;
-  padding: 10px;
-  border: 0.5px solid #da4ea2;
+  padding: 15px;
   border-radius: 3px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   @media only screen and (max-width: 768px) {
     flex-direction: row;
   }

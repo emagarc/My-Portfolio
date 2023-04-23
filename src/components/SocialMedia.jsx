@@ -5,11 +5,24 @@ import Instagram from "../public/images/Social Media/instagram.png";
 import Gmail from "../public/images/Social Media/gmail.png";
 import Github from "../public/images/Technologies/github.png";
 
-const Table = styled.table`
-  border-spacing: 200px 50px;
+const TableContainer = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  height: 100vh;
+  margin-right: 200px;
+  @media only screen and (max-width: 768px) {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 500px;
+  }
+`;
+
+const Table = styled.table`
+  border-spacing: 100px 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
   color: whitesmoke;
   text-shadow: 5px;
   margin: auto;
@@ -19,18 +32,6 @@ const Table = styled.table`
   }
 `;
 
-const Container = styled.div`
-  height: 100vh; /* Establecer la altura del contenedor en una unidad de medida relativa */
-  display: flex; /* Usar display: flex para poder centrar verticalmente la tabla */
-  align-items: center; /* Centrar verticalmente la tabla */
-  margin-left: 40px;
-  margin-top: 40px;
-  @media only screen and (max-width: 768px) {
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 500px;
-  }
-`;
 
 const Td = styled.td`
   padding: 5px;
@@ -52,10 +53,10 @@ const DivImage = styled.div`
 
   @keyframes zoom {
     0% {
-      transform: scale(0.7);
+      transform: scale(0.6);
     }
     100% {
-      transform: scale(0.9);
+      transform: scale(0.8);
     }
   }
 
@@ -153,13 +154,13 @@ const DivText = styled.div`
 
 const SocialMedia = () => {
   return (
-    <Container>
+    <TableContainer>
       <Table align="center">
         <tr>
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.linkedin.com/in/emanuel-garc%C3%ADa-226108116">
-                <img src={Linkedin} width="80" height="80" alt="Linkedin" />
+                <img src={Linkedin} width="55" height="55" alt="Linkedin" />
               </a>
             </DivImage>
             <br />
@@ -168,7 +169,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.instagram.com/emagarc/">
-                <img src={Instagram} width="80" height="80" alt="Instagram" />
+                <img src={Instagram} width="55" height="55" alt="Instagram" />
               </a>
             </DivImage>
             <br />
@@ -179,7 +180,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="mailto:mr.emanuel.garcia93@gmail.com">
-                <img src={Gmail} width="80" height="80" alt="Gmail" />
+                <img src={Gmail} width="55" height="55" alt="Gmail" />
               </a>
             </DivImage>
             <br />
@@ -188,7 +189,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://github.com/emagarc">
-                <img src={Github} width="80" height="80" alt="GitHub" />
+                <img src={Github} width="55" height="55" alt="GitHub" />
               </a>
             </DivImage>
             <br />
@@ -196,7 +197,7 @@ const SocialMedia = () => {
           </Td>
         </tr>
       </Table>
-    </Container>
+    </TableContainer>
   );
 };
 
