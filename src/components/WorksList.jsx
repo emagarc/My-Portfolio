@@ -129,7 +129,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: ${(props) => (props.isActive ? "65px" : "57px")};
+  font-size: ${(props) => (props.isActive ? "55px" : "47px")};
   font-weight: bold;
   cursor: pointer;
   color: ${(props) => (props.isActive ? "#da4ea2" : "whitesmoke")};
