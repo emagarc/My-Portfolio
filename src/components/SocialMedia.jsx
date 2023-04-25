@@ -10,7 +10,7 @@ const TableContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-right: 200px;
+  padding-right: 250px;
   @media only screen and (max-width: 768px) {
     margin-left: 0px;
     margin-top: 0px;
@@ -19,7 +19,7 @@ const TableContainer = styled.div`
 `;
 
 const Table = styled.table`
-  border-spacing: 100px 25px;
+  border-spacing: 45px 15px;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -160,7 +160,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.linkedin.com/in/emanuel-garc%C3%ADa-226108116">
-                <img src={Linkedin} width="55" height="55" alt="Linkedin" />
+                <img src={Linkedin} width="40" height="40" alt="Linkedin" />
               </a>
             </DivImage>
             <br />
@@ -169,18 +169,16 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://www.instagram.com/emagarc/">
-                <img src={Instagram} width="55" height="55" alt="Instagram" />
+                <img src={Instagram} width="40" height="40" alt="Instagram" />
               </a>
             </DivImage>
             <br />
             <DivText>Instagram</DivText>
           </Td>
-        </tr>
-        <tr>
           <Td align="center" width="100">
             <DivImage>
               <a href="mailto:mr.emanuel.garcia93@gmail.com">
-                <img src={Gmail} width="55" height="55" alt="Gmail" />
+                <img src={Gmail} width="40" height="40" alt="Gmail" />
               </a>
             </DivImage>
             <br />
@@ -189,7 +187,7 @@ const SocialMedia = () => {
           <Td align="center" width="100">
             <DivImage>
               <a href="https://github.com/emagarc">
-                <img src={Github} width="55" height="55" alt="GitHub" />
+                <img src={Github} width="40" height="40" alt="GitHub" />
               </a>
             </DivImage>
             <br />

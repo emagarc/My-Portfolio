@@ -2,6 +2,11 @@ import React from "react";
 import expressLogo from "../public/images/Technologies/express.png";
 import sassLogo from "../public/images/Technologies/sass.png";
 import githubLogoT from "../public/images/Technologies/github.png";
+import nextjs from "../public/images/Technologies/nextjs.png";
+import postgresql from "../public/images/Technologies/postgresql.png";
+import sequelize from "../public/images/Technologies/sequelize.png";
+import tailwind from "../public/images/Technologies/tailwind.png";
+import typescript from "../public/images/Technologies/typescript.png";
 import styled from "styled-components";
 
 const TableContainer = styled.div`
@@ -13,7 +18,7 @@ const TableContainer = styled.div`
 `;
 
 const Table = styled.table`
-  border-spacing: 5px 15px;
+  border-spacing: 15px 15px;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -95,14 +100,26 @@ const Technologies = () => {
             <Td align="center" width="100">
               <DivImage>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                  src={typescript}
                   width="60"
                   height="60"
-                  alt="NodeJS"
+                  alt="typescript"
                 />
               </DivImage>
               <br />
-              <DivText>Node.js</DivText>
+              <DivText>Typescript</DivText>
+            </Td>
+            <Td align="center" width="100">
+              <DivImage>
+                <img
+                  src={sequelize}
+                  width="60"
+                  height="60"
+                  alt="sequelize"
+                />
+              </DivImage>
+              <br />
+              <DivText>Sequelize</DivText>
             </Td>
             <Td align="center" width="100">
               <DivImage>
@@ -119,10 +136,22 @@ const Technologies = () => {
             <Td align="center" width="100">
               <DivImage>
                 <img
+                  src="https://files.raycast.com/4dnlt8m2mcb98bzc4zb8pggc4csi"
+                  width="60"
+                  height="60"
+                  alt="nextjs"
+                />
+              </DivImage>
+              <br />
+              <DivText>Next.js</DivText>
+            </Td>
+            <Td align="center" width="100">
+              <DivImage>
+                <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   width="60"
                   height="60"
-                  alt="HTML5"
+                  alt="git"
                 />
               </DivImage>
               <br />
@@ -145,14 +174,26 @@ const Technologies = () => {
             <Td align="center" width="100">
               <DivImage>
                 <img
-                  src={expressLogo}
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
                   width="60"
                   height="60"
-                  alt="JavaScript"
+                  alt="NodeJS"
                 />
               </DivImage>
               <br />
-              <DivText>Express</DivText>
+              <DivText>Node.js</DivText>
+            </Td> 
+            <Td align="center" width="100">
+              <DivImage>
+                <img
+                  src={postgresql}
+                  width="60"
+                  height="60"
+                  alt="PostgreSQL"
+                />
+              </DivImage>
+              <br />
+              <DivText>PostgresSQL</DivText>
             </Td>
             <Td align="center" width="100">
               <DivImage>
@@ -165,6 +206,18 @@ const Technologies = () => {
               </DivImage>
               <br />
               <DivText>CSS3</DivText>
+            </Td>
+            <Td align="center" width="100">
+              <DivImage>
+                <img
+                  src="https://www.sanity.io/static/images/logo_rounded_square.png"
+                  width="60"
+                  height="60"
+                  alt="sanity"
+                />
+              </DivImage>
+              <br />
+              <DivText>Sanity</DivText>
             </Td>
             <Td align="center" width="100">
               <DivImage>
@@ -190,21 +243,48 @@ const Technologies = () => {
             <Td align="center" width="100">
               <DivImage>
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  src={expressLogo}
                   width="60"
                   height="60"
                   alt="JavaScript"
                 />
               </DivImage>
               <br />
-              <DivText>PostgresSQL</DivText>
+              <DivText>Express</DivText>
             </Td>
             <Td align="center" width="100">
               <DivImage>
-                <img src={sassLogo} width="60" height="60" alt="Soon" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  width="60"
+                  height="60"
+                  alt="MySql"
+                />
+              </DivImage>
+              <br />
+              <DivText>MySQL</DivText>
+            </Td>
+            <Td align="center" width="100">
+              <DivImage>
+                <img src={sassLogo} 
+                width="60"
+                height="60"
+                alt="Soon"
+                />
               </DivImage>
               <br />
               <DivText>Sass</DivText>
+            </Td>
+            <Td align="center" width="100">
+              <DivImage>
+                <img src={tailwind}
+                width="60" 
+                height="60" 
+                alt="tailwind"
+                />
+              </DivImage>
+              <br />
+              <DivText>Tailwind</DivText>
             </Td>
             <Td align="center" width="100">
               <DivImage>
