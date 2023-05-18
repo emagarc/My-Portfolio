@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "./Carousel";
-import LP from "../public/images/FoodsWebsite/LP.png";
-import FoodsCards from "../public/images/FoodsWebsite/FoodCards.png";
-import FoodDetail from "../public/images/FoodsWebsite/FoodDetail.png";
-import FoodsForm from "../public/images/FoodsWebsite/FoodsForm.png";
+import Home from "../public/images/TikTik/home.png";
+import Detail from "../public/images/TikTik/detail.png";
+import Upload from "../public/images/TikTik/upload.png";
+import Profile from "../public/images/TikTik/profile.png";
 
 const Container = styled.div`
   margin-right: 150px;
@@ -56,6 +56,15 @@ const Description = styled.div`
   }
 `;
 
+const Text = styled.p`
+  opacity: 0.8;
+  font-size: 0.9rem;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+`;
+
 const ButtonContainer = styled.div`
   margin-top: 15px;
   align-self: flex-end;
@@ -63,15 +72,6 @@ const ButtonContainer = styled.div`
   @media only screen and (max-width: 768px) {
     margin-top: 0px;
     margin-right: 5px;
-  }
-`;
-
-const Text = styled.p`
-  opacity: 0.8;
-  font-size: 0.9rem;
-  @media only screen and (max-width: 768px) {
-    text-align: left;
-    font-size: 0.8rem;
   }
 `;
 
@@ -94,28 +94,27 @@ const Button = styled.button`
   }
 `;
 
-const FoodsWebsite = () => {
+const TikTik = () => {
   const items = [
     {
-      title: "Landing Page",
-      description: "Landing Page",
-      icon: LP,
+      title: "Home",
+      description: "Tik Tik Homepage",
+      icon: Home,
     },
     {
-      title: "Food Cards",
-      description: "Recipe Cards",
-      icon: FoodsCards,
+      title: "Video Details",
+      description: "Video details, likes and comments",
+      icon: Detail,
     },
     {
-      title: "Recipe Detail",
-      description:
-        "See the details and step-by-step instructions for the recipe.",
-      icon: FoodDetail,
+      title: "Profile Section",
+      description: "Profile Section, liked and posted videos",
+      icon: Profile,
     },
     {
-      title: "Food Form",
-      description: "Through this form, you can create your own recipe.",
-      icon: FoodsForm,
+      title: "Upload Section",
+      description: "In this section you can upload the video you want",
+      icon: Upload,
     },
   ];
   return (
@@ -125,21 +124,19 @@ const FoodsWebsite = () => {
       </CarouselContainer>
       <Description>
         <Text>
-          This project served as a precursor to the final project of the
-          FullStack web developer course at Henry. It was an individual project
-          aimed at putting into practice all the knowledge acquired during the
-          bootcamp. Essentially, an API for recipes was used to consume
-          information and display different recipes on the screen. The website
-          includes a landing page and a main page where recipes are displayed,
-          with the ability to filter by type or search by name. Clicking on each
-          recipe provides detailed information about it. Additionally, there is
-          a form with validators that allows users to create their own recipe
-          and display it alongside the rest. This was my first project, which is
-          why I hold it in high regard.
+          Tik Tik is a project that aims to replicate the renowned video-based
+          social media platform, TikTok. It has been entirely developed in
+          Typescript, leveraging Next.js, Tailwind, and Zustand. This robust
+          application allows users to upload videos, engage with content through
+          likes and comments, and explore suggested accounts. Additionally,
+          users can access individual profiles to view shared and liked videos.
+          The backend implementation utilizes Sanity, while React-oauth/google
+          integration handles user authentication and login procedures, ensuring
+          a secure and reliable environment.
         </Text>
         <ButtonContainer>
-          <a href="https://github.com/emagarc/PI-Food-Henry" target="_blank">
-            <Button>Repository</Button>
+          <a href="https://tiktik-clone-two-fawn.vercel.app/" target="_blank">
+            <Button>Website</Button>
           </a>
         </ButtonContainer>
       </Description>
@@ -147,4 +144,4 @@ const FoodsWebsite = () => {
   );
 };
 
-export default FoodsWebsite;
+export default TikTik;

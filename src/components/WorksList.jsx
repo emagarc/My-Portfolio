@@ -2,10 +2,11 @@ import React, { useState, useContext } from "react";
 import styled, { css } from "styled-components";
 import FoodsWebsite from "./FoodsWebsite";
 import HenryCinema from "./HenryCinema";
+import TikTik from "./TikTik";
 import { StarsContext } from "../App";
 import line from "../public/images/Wallpapers/line.png";
 
-const data = ["Henry Cinema", "Foods Website"];
+const data = ["Tik Tik", "Henry Cinema", "Foods Website"];
 
 const Section = styled.div`
   min-height: 100vh;
@@ -139,16 +140,16 @@ const ListItem = styled.li`
   @media only screen and (max-width: 768px) {
     font-size: 25px;
   }
-  z-index: 999999
+  z-index: 999999;
 `;
 
 const ListItemContainer = styled.div`
-background-color:${(props) => (props.isActive ? "#2c065d" : "transparent")};
-opacity: 1;
-z-index: 999999;
-padding: 10px;
-border-radius: 10px;
-`
+  background-color: ${(props) => (props.isActive ? "#2c065d" : "transparent")};
+  opacity: 1;
+  z-index: 999999;
+  padding: 10px;
+  border-radius: 10px;
+`;
 
 const Right = styled.div`
   flex: 1;
@@ -206,7 +207,7 @@ const Button = styled.button`
 `;
 
 const WorksList = ({ onBackClick }) => {
-  const [Work, setWork] = useState("Henry Cinema");
+  const [Work, setWork] = useState("Tik Tik");
   const { showStars } = useContext(StarsContext);
 
   return (
@@ -223,25 +224,27 @@ const WorksList = ({ onBackClick }) => {
           <List>
             {data.map((item) => (
               <ListItemContainer isActive={Work === item}>
-              <ListItem 
-              key={item} 
-              text={item}
-              isActive={Work === item} 
-              onClick={() => setWork(item)}
-              >
-                {item}
-              </ListItem>
+                <ListItem
+                  key={item}
+                  text={item}
+                  isActive={Work === item}
+                  onClick={() => setWork(item)}
+                >
+                  {item}
+                </ListItem>
               </ListItemContainer>
             ))}
           </List>
         </Left>
         <Right showStars={showStars}>
-          {Work === "Henry Cinema" ? (
+          {Work === "Tik Tik" ? (
+            <TikTik />
+          ) : Work === "Henry Cinema" ? (
             <HenryCinema />
           ) : Work === "Foods Website" ? (
             <FoodsWebsite />
           ) : (
-            <HenryCinema />
+            <TikTik />
           )}
         </Right>
       </Container>

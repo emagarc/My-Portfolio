@@ -177,7 +177,10 @@ const HenryCinema = () => {
           moviegoers.
         </Text>
         <ButtonContainer>
-          <a href="https://github.com/JuanCruzL/Henry-Cinema---FP">
+          <a
+            href="https://github.com/JuanCruzL/Henry-Cinema---FP"
+            target="_blank"
+          >
             <Button>Repository</Button>
           </a>
         </ButtonContainer>
